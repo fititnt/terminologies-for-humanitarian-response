@@ -42,28 +42,56 @@
     
 
 
+    <!-- https://purl.org/eticaai/xcod#XCOD_001 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_001">
+        <rdfs:label xml:lang="en">Common Operational Datasets</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/xcod#XCOD_002 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_002">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-09-17: replaced by COD-CS; see https://humanitarian.atlassian.net/wiki/spaces/imtoolbox/pages/2965897217/Country-specific+CODs+COD-CS</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://purl.org/eticaai/xcod#XCOD_004"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
     <!-- https://purl.org/eticaai/xcod#XCOD_003 -->
 
     <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_003">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#1"/>
-        <skos:prefLabel xml:lang="pt">Populated Places</skos:prefLabel>
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_001"/>
+        <skos:prefLabel xml:lang="en">Core Common Operational Datasets</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/xcod#0 -->
+    <!-- https://purl.org/eticaai/xcod#XCOD_004 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/xcod#0">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#1"/>
-        <skos:prefLabel xml:lang="pt">Administrative Boundaries</skos:prefLabel>
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_004">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_001"/>
+        <skos:prefLabel xml:lang="en">Country-specific Common Operational Datasets</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/xcod#1 -->
+    <!-- https://purl.org/eticaai/xcod#XCOD_010 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/xcod#1">
-        <skos:prefLabel xml:lang="pt">Common Operational Dataset</skos:prefLabel>
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_010">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_003"/>
+        <skos:prefLabel xml:lang="en">Administrative Boundaries</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/xcod#XCOD_011 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_011">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_001"/>
+        <skos:prefLabel xml:lang="en">Populated Places</skos:prefLabel>
     </owl:Class>
 </rdf:RDF>
 

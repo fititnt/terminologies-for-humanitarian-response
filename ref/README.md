@@ -1,6 +1,8 @@
 
 - [2008_ocha_profiling-idps.pdf](2008_ocha_profiling-idps.pdf)
   - https://www.humanitarianresponse.info/topics/imwg/document/guidance-profiling-internally-displaced-persons-idmc-ocha
+- [2010_iasc_cod-guidelines.pdf](2010_iasc_cod-guidelines.pdf)
+  - https://interagencystandingcommittee.org/system/files/2021-03/IASC%20Guidelines%20on%20Common%20Operational%20Datasets%20in%20Disaster%20Preparedness%20and%20Response.pdf
 - [2012_acaps_est-pop-fig.pdf](2012_acaps_est-pop-fig.pdf)
   - https://www.humanitarianresponse.info/en/topics/imwg/document/desk-review-rapid-estimation-affected-population-figures-2012-acaps
 - [2012_iasc_cod-hp-guidelines.pdf](2012_iasc_cod-hp-guidelines.pdf)
