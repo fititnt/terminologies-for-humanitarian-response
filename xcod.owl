@@ -25,6 +25,12 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
@@ -45,7 +51,8 @@
     <!-- https://purl.org/eticaai/xcod#XCOD_001 -->
 
     <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_001">
-        <rdfs:label xml:lang="en">Common Operational Datasets</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_008"/>
+        <rdfs:label xml:lang="en">common operational datasets</rdfs:label>
     </owl:Class>
     
 
@@ -53,6 +60,7 @@
     <!-- https://purl.org/eticaai/xcod#XCOD_002 -->
 
     <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_002">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_001"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-09-17: replaced by COD-CS; see https://humanitarian.atlassian.net/wiki/spaces/imtoolbox/pages/2965897217/Country-specific+CODs+COD-CS</rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://purl.org/eticaai/xcod#XCOD_004"/>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -78,10 +86,45 @@
     
 
 
+    <!-- https://purl.org/eticaai/xcod#XCOD_005 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_005">
+        <rdfs:label xml:lang="en">data wrangling organization</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) a company, institution or an association able to transform and mapping data from one raw data form into another format with the intent of making it more appropriate and valuable</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/xcod#XCOD_006 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_006">
+        <rdfs:label xml:lang="en">data set</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) a collection of data</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/xcod#XCOD_007 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_007">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_005"/>
+        <rdfs:label xml:lang="en">guardian of common operational datasets</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/xcod#XCOD_008 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_008">
+        <rdfs:label xml:lang="en">thematic collection of datasets</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://purl.org/eticaai/xcod#XCOD_010 -->
 
     <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_010">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_003"/>
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_006"/>
         <skos:prefLabel xml:lang="en">Administrative Boundaries</skos:prefLabel>
     </owl:Class>
     
@@ -90,8 +133,18 @@
     <!-- https://purl.org/eticaai/xcod#XCOD_011 -->
 
     <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_011">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_001"/>
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_006"/>
         <skos:prefLabel xml:lang="en">Populated Places</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/xcod#XCOD_012 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_012">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_006"/>
+        <rdfs:seeAlso>https://www.wikidata.org/wiki/Q42250</rdfs:seeAlso>
+        <skos:prefLabel xml:lang="pt">hydrology dataset</skos:prefLabel>
     </owl:Class>
 </rdf:RDF>
 
