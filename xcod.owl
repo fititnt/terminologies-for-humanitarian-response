@@ -25,6 +25,12 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#definition -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
@@ -72,7 +78,7 @@
 
     <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_003">
         <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_001"/>
-        <skos:prefLabel xml:lang="en">Core Common Operational Datasets</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">core common operational datasets</skos:prefLabel>
     </owl:Class>
     
 
@@ -81,7 +87,7 @@
 
     <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_004">
         <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_001"/>
-        <skos:prefLabel xml:lang="en">Country-specific Common Operational Datasets</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">country-specific common operational datasets</skos:prefLabel>
     </owl:Class>
     
 
@@ -125,7 +131,8 @@
 
     <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_010">
         <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_006"/>
-        <skos:prefLabel xml:lang="en">Administrative Boundaries</skos:prefLabel>
+        <rdfs:seeAlso>https://www.wikidata.org/wiki/Q56061</rdfs:seeAlso>
+        <skos:prefLabel xml:lang="en">administrative division dataset</skos:prefLabel>
     </owl:Class>
     
 
@@ -134,7 +141,9 @@
 
     <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_011">
         <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_006"/>
-        <skos:prefLabel xml:lang="en">Populated Places</skos:prefLabel>
+        <rdfs:seeAlso>https://www.wikidata.org/wiki/Q486972</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">populated place dataset</skos:altLabel>
+        <skos:prefLabel xml:lang="en">human settlement dataset</skos:prefLabel>
     </owl:Class>
     
 
@@ -144,7 +153,47 @@
     <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_012">
         <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_006"/>
         <rdfs:seeAlso>https://www.wikidata.org/wiki/Q42250</rdfs:seeAlso>
-        <skos:prefLabel xml:lang="pt">hydrology dataset</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">hydrology dataset</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/xcod#XCOD_013 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_013">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_006"/>
+        <rdfs:seeAlso>https://www.wikidata.org/wiki/Q109828918</rdfs:seeAlso>
+        <skos:prefLabel xml:lang="en">hypsography dataset</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/xcod#XCOD_014 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_014">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_006"/>
+        <rdfs:seeAlso>https://www.wikidata.org/wiki/Q924286</rdfs:seeAlso>
+        <skos:prefLabel xml:lang="en">transport network dataset</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/xcod#XCOD_015 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_015">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_006"/>
+        <rdfs:comment xml:lang="en">TODO: not sure which name to use for this this terminology. Already existing concepts are (https://en.wikipedia.org/wiki/Common_operational_picture) and situation awareness (https://en.wikipedia.org/wiki/Situation_awareness)</rdfs:comment>
+        <skos:altLabel xml:lang="en">Humanitarian Profile CODs (COD-HP)</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/xcod#XCOD_016 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_016">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_010"/>
+        <rdfs:seeAlso>https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative</rdfs:seeAlso>
+        <skos:prefLabel xml:lang="pt">administrative boundary geospatial dataset</skos:prefLabel>
     </owl:Class>
 </rdf:RDF>
 
