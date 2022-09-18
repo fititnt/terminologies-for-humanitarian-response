@@ -1,0 +1,76 @@
+Topic (folder or feature dataset name),Code,Code Description,Sub-Code,Sub-Code Description
+Base_data,,,,
+Admin,admbnd,Administrative boundaries,---,Multiple types of administrative boundaries
+,,,int,International boundaries
+,,,admX,Administrative level.  Ex: First admin level = adm1.  Ex: National parks = admpark
+Settlements,ppl,"Populated places, settlements, camps",---,Multiple types of populated places
+,,,idp,IDP locations
+,,,ref,Refugee locations
+,,,pow,Prisoner of war location
+,,,det,Detention centers
+,builtup,"Built-up areas, urban areas",,
+Transportation,rlw,Railways,---,
+,rds,Roads,---,
+,stn,Railway stations,---,
+,wtw,Waterways,---,
+,airdrm,Airdromes,---,Multiple types of airdromes
+,,,unsp,Unspecified*
+,,,airp,Airports*
+,,,airf,Airfields*
+,,,airs,Airstrips*
+,,,fhlz,Fixed HLZs*
+,,,ihlz,Improvised HLZs*
+,prt,Ports,---,Multiple types of ports
+,,,unsp,Unspecified*
+,,,sea,Seaports*
+,,,rvr,Riverports*
+,,,lake,Lakeports*
+,,,beach,Beachings*
+,,,bank,Banks*
+,,,pier,Piers*
+,,,ramp,Ramps*
+,,,anch,Achorages*
+,,,ihlz,Improvised HLZs*
+Hydrology,riv,Rivers and streams,,
+,sea,Oceans/Seas,,
+,lake,Lakes,,
+,shed,Watersheds,lvlX,Level in a hierarchical watershed scheme.  Ex: Largest watersheds = lvl1
+Terrain,elev,Elevation,cont,Elev. contour
+,,,dem,Digital elevation models
+,,,tin,TIN model
+,depth,Depth,cont,Depth contour
+Landmarks,,,,
+Index_grids,graticule,Graticules,---,
+,,,utm,UTM grid
+,,,ll,Lat-Long grid
+,,,time,Time zone boundaries
+Thematic_data,,,,
+Humanitarian_profile,hp,Humanitarian caseload,---,Tabular data of humanitarain profile (caseload) data
+,,,loc,Multiple types of humanitarian profile locations
+,,,idp,IDP locations
+,,,ref,Refugee locations
+Demographics,pop,Population statistics,year,Tabular data of population statistics with year of count/estimation
+Security,secincident,Security incidents,---,
+Accessibility,,,,
+Service_infrastructre,,,,
+Emergency_services,,,,
+Health,hltfac,Health facility,---,
+Education,edufac,Education facility,---,
+Land_use,lndcvr,Land use and land cover,---,
+Utilities,,,,
+Hazards,fldzone,Flood zone,---,
+,fault,Geologic fault,---,
+Geophysical,,,,
+Social,,,,
+WWW,www,Who what where,---,Tabular data regarding 3W
+,wwwloc,Who what where locations,---,
+,wwwanno,Who what where annotations,---,
+Damage,affarea,Affected areas,---,
+,dmg,Damage assessment,---,
+,fldextent,Flood extents,---,
+Imagery,,,,
+[use sensor name],image,"Imagery data products (aerial or satellite imagery, scanned maps, etc.)",clr,"True color imagery (RGB = R,G,B)"
+,,,cir,"Color infrared (RGB = nIR,R,G)"
+,,,ms,"Multispectral, more than 3 color bands"
+,,,scan,Scanned maps
+,,,sar,Synthetic aperture radar
