@@ -10,6 +10,7 @@
      xmlns:xcod="https://purl.org/eticaai/xcod#">
     <owl:Ontology rdf:about="https://purl.org/eticaai/xcod#">
         <rdfs:comment xml:lang="en">Non-official Basic Formal Ontology encoding of the data collections of Common Operational Datasets (authoritative reference datasets needed to support operations and decision-making for all actors in a humanitarian response)</rdfs:comment>
+        <rdfs:comment>TODO https://humanitarian.atlassian.net/wiki/spaces/codtsp/pages/41974186/Potential+CODs+for+Natural+Disaster</rdfs:comment>
     </owl:Ontology>
     
 
@@ -140,7 +141,7 @@
     <!-- https://purl.org/eticaai/xcod#XCOD_011 -->
 
     <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_011">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_006"/>
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_017"/>
         <rdfs:seeAlso>https://www.wikidata.org/wiki/Q486972</rdfs:seeAlso>
         <skos:altLabel xml:lang="en">populated place dataset</skos:altLabel>
         <skos:prefLabel xml:lang="en">human settlement dataset</skos:prefLabel>
@@ -153,6 +154,7 @@
     <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_012">
         <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_006"/>
         <rdfs:seeAlso>https://www.wikidata.org/wiki/Q42250</rdfs:seeAlso>
+        <skos:definition xml:lang="en">datasets used by the hydrology, the science that deals with the water above, on and below the land surface of the earth</skos:definition>
         <skos:prefLabel xml:lang="en">hydrology dataset</skos:prefLabel>
     </owl:Class>
     
@@ -172,6 +174,7 @@
 
     <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_014">
         <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_006"/>
+        <rdfs:seeAlso>https://www.wikidata.org/wiki/Property:P16</rdfs:seeAlso>
         <rdfs:seeAlso>https://www.wikidata.org/wiki/Q924286</rdfs:seeAlso>
         <skos:prefLabel xml:lang="en">transport network dataset</skos:prefLabel>
     </owl:Class>
@@ -182,7 +185,7 @@
 
     <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_015">
         <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_006"/>
-        <rdfs:comment xml:lang="en">TODO: not sure which name to use for this this terminology. Already existing concepts are (https://en.wikipedia.org/wiki/Common_operational_picture) and situation awareness (https://en.wikipedia.org/wiki/Situation_awareness)</rdfs:comment>
+        <rdfs:comment xml:lang="en">TODO: not sure which name to use for this this terminology. Already existing concepts are (https://en.wikipedia.org/wiki/Common_operational_picture) and situation awareness (https://en.wikipedia.org/wiki/Situation_awareness). (note 2) Okay, COP is used here https://www.dhs.gov/publication/common-operating-picture-emergency-responders</rdfs:comment>
         <skos:altLabel xml:lang="en">Humanitarian Profile CODs (COD-HP)</skos:altLabel>
     </owl:Class>
     
@@ -194,6 +197,125 @@
         <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_010"/>
         <rdfs:seeAlso>https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative</rdfs:seeAlso>
         <skos:prefLabel xml:lang="pt">administrative boundary geospatial dataset</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/xcod#XCOD_017 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_017">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_006"/>
+        <skos:prefLabel xml:lang="en">demography dataset</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/xcod#XCOD_018 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_018">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_017"/>
+        <rdfs:seeAlso xml:lang="en">https://www.wikidata.org/wiki/Property:P1082</rdfs:seeAlso>
+        <skos:prefLabel xml:lang="pt">baseline population dataset</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/xcod#XCOD_019 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_019">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_017"/>
+        <rdfs:seeAlso>https://www.wikidata.org/wiki/Q852082</rdfs:seeAlso>
+        <skos:prefLabel xml:lang="pt">population geography dataset</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/xcod#XCOD_020 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_020">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_017"/>
+        <rdfs:seeAlso>https://www.wikidata.org/wiki/Q1965979</rdfs:seeAlso>
+        <skos:prefLabel xml:lang="pt">demographic statistics dataset</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/xcod#XCOD_021 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_021">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_017"/>
+        <rdfs:seeAlso>https://www.wikidata.org/wiki/Q2369019</rdfs:seeAlso>
+        <skos:prefLabel xml:lang="pt">population projection dataset</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/xcod#XCOD_022 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_022">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_014"/>
+        <rdfs:seeAlso>https://www.wikidata.org/wiki/Q358078</rdfs:seeAlso>
+        <skos:prefLabel xml:lang="en">road network dataset</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/xcod#XCOD_023 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_023">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_014"/>
+        <rdfs:seeAlso>https://www.wikidata.org/wiki/Q2678338</rdfs:seeAlso>
+        <skos:prefLabel xml:lang="en">railway network dataset</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/xcod#XCOD_024 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_024">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_014"/>
+        <rdfs:seeAlso>https://www.wikidata.org/wiki/Q12280</rdfs:seeAlso>
+        <skos:prefLabel xml:lang="en">bridge dataset</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/xcod#XCOD_025 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_025">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_014"/>
+        <rdfs:seeAlso>https://www.wikidata.org/wiki/Q44782</rdfs:seeAlso>
+        <skos:prefLabel xml:lang="en">port dataset</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/xcod#XCOD_026 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_026">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_014"/>
+        <rdfs:seeAlso>https://www.wikidata.org/wiki/Q62447</rdfs:seeAlso>
+        <skos:prefLabel xml:lang="en">aerodrome dataset</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/xcod#XCOD_027 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_027">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_026"/>
+        <rdfs:seeAlso>https://www.wikidata.org/wiki/Q1248784</rdfs:seeAlso>
+        <skos:prefLabel xml:lang="en">airport dataset</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/xcod#XCOD_028 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_028">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_026"/>
+        <rdfs:seeAlso>https://www.wikidata.org/wiki/Q534159</rdfs:seeAlso>
+        <skos:prefLabel xml:lang="en">helipad dataset</skos:prefLabel>
     </owl:Class>
 </rdf:RDF>
 

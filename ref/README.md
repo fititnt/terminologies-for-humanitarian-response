@@ -25,3 +25,4 @@
 ## @TODO
 - https://humanitarian.atlassian.net/wiki/spaces/codtsp/pages/41973698/Humanitarian+Profile+CODs+COD-HP
   - https://sites.google.com/site/ochaimwiki/file-and-dataset-naming-manual/table-dataset-naming-codes
+- https://docs.google.com/spreadsheets/d/1XO-sQegBUQZ-SzaJ0wWlAvkio5RKFXqOTrmwjIp7dTA/edit#gid=212557382
