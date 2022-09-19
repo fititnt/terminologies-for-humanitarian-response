@@ -19,6 +19,17 @@
   - https://www.humanitarianresponse.info/en/node/104854
 - [2016_iasc_hum-pop-fig.pdf](2016_iasc_hum-pop-fig.pdf)
   - https://www.humanitarianresponse.info/en/programme-cycle/space/document/humanitarian-profile-support-guidance
+- [2017__cds-datasets-taxonomy-v1-draft.xlsx](2017__cds-datasets-taxonomy-v1-draft.xlsx)
+  - https://docs.google.com/spreadsheets/d/1PmWDWBUGY9I9MyDPsmFG7MsBIA1bOR3053auqMbyrUw/edit#gid=0
+    - https://humanitarian.atlassian.net/wiki/spaces/imtoolbox/pages/61800455/Coordinated+Data+Scramble
+    - https://www.digitalhumanitarians.com/coordinated-data-scramble-cds/
+    - https://www.youtube.com/watch?v=HmsF743VRX0
+      - This talk about terminology
+    - https://docs.google.com/presentation/d/1weoUvekKWEyRE7EiX9CmHGE-9MGrRrvCTQ2Bf64fY48/edit#slide=id.p17
+    - https://groups.google.com/g/coi-data-scramble
+    - https://trello.com/b/b2vwU0LS/earthquakes-coordinated-data-scramble
+    - https://docs.google.com/document/d/1iJCYQ8kodG-Fctir6i5Nfvs3XjlFSAIz4cvnqUGp2No/edit
+
 - @TODO
   - https://www.humanitarianresponse.info/en/topics/imwg/document/desk-review-rapid-estimation-affected-population-figures-2012-acaps
 
@@ -26,3 +37,5 @@
 - https://humanitarian.atlassian.net/wiki/spaces/codtsp/pages/41973698/Humanitarian+Profile+CODs+COD-HP
   - https://sites.google.com/site/ochaimwiki/file-and-dataset-naming-manual/table-dataset-naming-codes
 - https://docs.google.com/spreadsheets/d/1XO-sQegBUQZ-SzaJ0wWlAvkio5RKFXqOTrmwjIp7dTA/edit#gid=212557382
+- https://ir.hpc.tools/indicators
+  - https://ir.hpc.tools/export/indicators/index.csv
