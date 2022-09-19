@@ -4,6 +4,8 @@
   - https://www.oecd.org/derec/50189495.pdf
 - [1996_odi_rwanda-genocide-s3-hum-aid-lessons.pdf](1996_odi_rwanda-genocide-s3-hum-aid-lessons.pdf)
   - https://www.alnap.org/help-library/the-international-response-to-conflict-and-genocide-lessons-from-the-rwanda-1
+- [1998_icrc_hum-aid-impact-on-conflict.pdf](1998_icrc_hum-aid-impact-on-conflict.pdf)
+  - https://international-review.icrc.org/sites/default/files/S0020860400091051a.pdf
 - [2008_ocha_profiling-idps.pdf](2008_ocha_profiling-idps.pdf)
   - https://www.humanitarianresponse.info/topics/imwg/document/guidance-profiling-internally-displaced-persons-idmc-ocha
 - [2010_iasc_cod-guidelines.pdf](2010_iasc_cod-guidelines.pdf)
