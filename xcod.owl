@@ -1,14 +1,19 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://purl.org/eticaai/xcod#"
      xml:base="https://purl.org/eticaai/xcod"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:xcod="https://purl.org/eticaai/xcod#">
+     xmlns:xcod="https://purl.org/eticaai/xcod#"
+     xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://purl.org/eticaai/xcod#">
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl"/>
         <rdfs:comment xml:lang="en">Non-official Basic Formal Ontology encoding of the data collections of Common Operational Datasets (authoritative reference datasets needed to support operations and decision-making for all actors in a humanitarian response)</rdfs:comment>
         <rdfs:comment>TODO https://humanitarian.atlassian.net/wiki/spaces/codtsp/pages/41974186/Potential+CODs+for+Natural+Disaster</rdfs:comment>
     </owl:Ontology>
@@ -23,6 +28,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000114 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000114"/>
     
 
 
@@ -47,11 +58,66 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000136 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000136">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000112 xml:lang="en">This document is about information artifacts and their representations</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115 xml:lang="en">A (currently) primitive relation that relates an information artifact to an entity.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">7/6/2009 Alan Ruttenberg. Following discussion with Jonathan Rees, and introduction of &quot;mentions&quot; relation. Weaken the is_about relationship to be primitive. 
+
+We will try to build it back up by elaborating the various subproperties that are more precisely defined.
+
+Some currently missing phenomena that should be considered &quot;about&quot; are predications - &quot;The only person who knows the answer is sitting beside me&quot; , Allegory, Satire, and other literary forms that can be topical without explicitly mentioning the topic.</obo:IAO_0000116>
+        <obo:IAO_0000117 xml:lang="en">person:Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">Smith, Ceusters, Ruttenberg, 2000 years of philosophy</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">is about</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000030">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000111 xml:lang="en">information content entity</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">Examples of information content entites include journal articles, data, graphical layouts, and graphs.</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">A generically dependent continuant that is about some thing.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">2014-03-10: The use of &quot;thing&quot; is intended to be general enough to include universals and configurations (see https://groups.google.com/d/msg/information-ontology/GBxvYZCk1oc/-L6B5fSBBTQJ).</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">information_content_entity &apos;is_encoded_in&apos; some digital_entity in obi before split (040907). information_content_entity &apos;is_encoded_in&apos; some physical_document in obi before split (040907).
+
+Previous. An information content entity is a non-realizable information entity that &apos;is encoded in&apos; some digital or physical entity.</obo:IAO_0000116>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Chris Stoeckert</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">OBI_0000142</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">information content entity</rdfs:label>
+    </owl:Class>
     
 
 
@@ -96,6 +162,7 @@
     <!-- https://purl.org/eticaai/xcod#XCOD_005 -->
 
     <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
         <rdfs:label xml:lang="en">data wrangling organization</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) a company, institution or an association able to transform and mapping data from one raw data form into another format with the intent of making it more appropriate and valuable</skos:definition>
     </owl:Class>
@@ -105,6 +172,7 @@
     <!-- https://purl.org/eticaai/xcod#XCOD_006 -->
 
     <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdfs:label xml:lang="en">data set</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) a collection of data</skos:definition>
     </owl:Class>
@@ -123,6 +191,7 @@
     <!-- https://purl.org/eticaai/xcod#XCOD_008 -->
 
     <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_008">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdfs:label xml:lang="en">thematic collection of datasets</rdfs:label>
     </owl:Class>
     
@@ -196,7 +265,7 @@
     <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_016">
         <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_010"/>
         <rdfs:seeAlso>https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative</rdfs:seeAlso>
-        <skos:prefLabel xml:lang="pt">administrative boundary geospatial dataset</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">administrative boundary geospatial dataset</skos:prefLabel>
     </owl:Class>
     
 
@@ -215,7 +284,7 @@
     <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_018">
         <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_017"/>
         <rdfs:seeAlso xml:lang="en">https://www.wikidata.org/wiki/Property:P1082</rdfs:seeAlso>
-        <skos:prefLabel xml:lang="pt">baseline population dataset</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">baseline population dataset</skos:prefLabel>
     </owl:Class>
     
 
@@ -225,7 +294,7 @@
     <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_019">
         <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_017"/>
         <rdfs:seeAlso>https://www.wikidata.org/wiki/Q852082</rdfs:seeAlso>
-        <skos:prefLabel xml:lang="pt">population geography dataset</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">population geography dataset</skos:prefLabel>
     </owl:Class>
     
 
@@ -235,7 +304,7 @@
     <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_020">
         <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_017"/>
         <rdfs:seeAlso>https://www.wikidata.org/wiki/Q1965979</rdfs:seeAlso>
-        <skos:prefLabel xml:lang="pt">demographic statistics dataset</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">demographic statistics dataset</skos:prefLabel>
     </owl:Class>
     
 
@@ -245,7 +314,7 @@
     <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_021">
         <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_017"/>
         <rdfs:seeAlso>https://www.wikidata.org/wiki/Q2369019</rdfs:seeAlso>
-        <skos:prefLabel xml:lang="pt">population projection dataset</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">population projection dataset</skos:prefLabel>
     </owl:Class>
     
 
