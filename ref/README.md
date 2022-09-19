@@ -50,3 +50,5 @@
 - https://docs.google.com/spreadsheets/d/1XO-sQegBUQZ-SzaJ0wWlAvkio5RKFXqOTrmwjIp7dTA/edit#gid=212557382
 - https://ir.hpc.tools/indicators
   - https://ir.hpc.tools/export/indicators/index.csv
+- https://github.com/mazimweal/mazimweal.github.io
+  - https://doi.org/10.3390/ijgi10050324
