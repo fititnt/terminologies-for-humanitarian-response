@@ -1,6 +1,8 @@
 # References
 
-- [1996_odi_rwanda-genocide-hum-aid-lessons.pdf](1996_odi_rwanda-genocide-hum-aid-lessons.pdf)
+- [1996_odi_rwanda-genocide-s1-s2-s3-s4.pdf](1996_odi_rwanda-genocide-s1-s2-s3-s4.pdf)
+  - https://www.oecd.org/derec/50189495.pdf
+- [1996_odi_rwanda-genocide-s3-hum-aid-lessons.pdf](1996_odi_rwanda-genocide-s3-hum-aid-lessons.pdf)
   - https://www.alnap.org/help-library/the-international-response-to-conflict-and-genocide-lessons-from-the-rwanda-1
 - [2008_ocha_profiling-idps.pdf](2008_ocha_profiling-idps.pdf)
   - https://www.humanitarianresponse.info/topics/imwg/document/guidance-profiling-internally-displaced-persons-idmc-ocha
