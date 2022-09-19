@@ -1,21 +1,20 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://purl.org/eticaai/xcod#"
      xml:base="https://purl.org/eticaai/xcod"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:xcod="https://purl.org/eticaai/xcod#"
-     xmlns:terms="http://purl.org/dc/terms/">
+     xmlns:xcod="https://purl.org/eticaai/xcod#">
     <owl:Ontology rdf:about="https://purl.org/eticaai/xcod#">
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/bfo/2020/bfo.owl"/>
         <rdfs:comment xml:lang="en">Non-official Basic Formal Ontology encoding of the data collections of Common Operational Datasets (authoritative reference datasets needed to support operations and decision-making for all actors in a humanitarian response)</rdfs:comment>
         <rdfs:comment>TODO https://humanitarian.atlassian.net/wiki/spaces/codtsp/pages/41974186/Potential+CODs+for+Natural+Disaster</rdfs:comment>
+        <dc:license rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/"/>
     </owl:Ontology>
     
 
@@ -31,9 +30,45 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000111 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000111"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000112 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000112"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000114 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000114"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000116"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000117 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000117"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000119"/>
     
 
 
@@ -96,6 +131,24 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BFO_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000001"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000031 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000034 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000034"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000030">
@@ -121,47 +174,47 @@ Previous. An information content entity is a non-realizable information entity t
     
 
 
-    <!-- https://purl.org/eticaai/xcod#XCOD_001 -->
+    <!-- https://purl.org/eticaai/xcod#XCOD_0001 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_001">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_008"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_0001">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_0008"/>
         <rdfs:label xml:lang="en">common operational datasets</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/xcod#XCOD_002 -->
+    <!-- https://purl.org/eticaai/xcod#XCOD_0002 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_002">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_001"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_0002">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_0001"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-09-17: replaced by COD-CS; see https://humanitarian.atlassian.net/wiki/spaces/imtoolbox/pages/2965897217/Country-specific+CODs+COD-CS</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="https://purl.org/eticaai/xcod#XCOD_004"/>
+        <rdfs:seeAlso rdf:resource="https://purl.org/eticaai/xcod#XCOD_0004"/>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/xcod#XCOD_003 -->
+    <!-- https://purl.org/eticaai/xcod#XCOD_0003 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_003">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_001"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_0003">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_0001"/>
         <skos:prefLabel xml:lang="en">core common operational datasets</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/xcod#XCOD_004 -->
+    <!-- https://purl.org/eticaai/xcod#XCOD_0004 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_004">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_001"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_0004">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_0001"/>
         <skos:prefLabel xml:lang="en">country-specific common operational datasets</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/xcod#XCOD_005 -->
+    <!-- https://purl.org/eticaai/xcod#XCOD_0005 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_005">
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_0005">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
         <rdfs:label xml:lang="en">data wrangling organization</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) a company, institution or an association able to transform and mapping data from one raw data form into another format with the intent of making it more appropriate and valuable</skos:definition>
@@ -169,9 +222,9 @@ Previous. An information content entity is a non-realizable information entity t
     
 
 
-    <!-- https://purl.org/eticaai/xcod#XCOD_006 -->
+    <!-- https://purl.org/eticaai/xcod#XCOD_0006 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_006">
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_0006">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdfs:label xml:lang="en">data set</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) a collection of data</skos:definition>
@@ -179,38 +232,38 @@ Previous. An information content entity is a non-realizable information entity t
     
 
 
-    <!-- https://purl.org/eticaai/xcod#XCOD_007 -->
+    <!-- https://purl.org/eticaai/xcod#XCOD_0007 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_007">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_005"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_0007">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_0005"/>
         <rdfs:label xml:lang="en">guardian of common operational datasets</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/xcod#XCOD_008 -->
+    <!-- https://purl.org/eticaai/xcod#XCOD_0008 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_008">
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_0008">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdfs:label xml:lang="en">thematic collection of datasets</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/xcod#XCOD_010 -->
+    <!-- https://purl.org/eticaai/xcod#XCOD_0010 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_010">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_006"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_0010">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_0006"/>
         <rdfs:seeAlso>https://www.wikidata.org/wiki/Q56061</rdfs:seeAlso>
         <skos:prefLabel xml:lang="en">administrative division dataset</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/xcod#XCOD_011 -->
+    <!-- https://purl.org/eticaai/xcod#XCOD_0011 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_011">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_017"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_0011">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_0017"/>
         <rdfs:seeAlso>https://www.wikidata.org/wiki/Q486972</rdfs:seeAlso>
         <skos:altLabel xml:lang="en">populated place dataset</skos:altLabel>
         <skos:prefLabel xml:lang="en">human settlement dataset</skos:prefLabel>
@@ -218,10 +271,10 @@ Previous. An information content entity is a non-realizable information entity t
     
 
 
-    <!-- https://purl.org/eticaai/xcod#XCOD_012 -->
+    <!-- https://purl.org/eticaai/xcod#XCOD_0012 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_012">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_006"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_0012">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_0006"/>
         <rdfs:seeAlso>https://www.wikidata.org/wiki/Q42250</rdfs:seeAlso>
         <skos:definition xml:lang="en">datasets used by the hydrology, the science that deals with the water above, on and below the land surface of the earth</skos:definition>
         <skos:prefLabel xml:lang="en">hydrology dataset</skos:prefLabel>
@@ -229,20 +282,20 @@ Previous. An information content entity is a non-realizable information entity t
     
 
 
-    <!-- https://purl.org/eticaai/xcod#XCOD_013 -->
+    <!-- https://purl.org/eticaai/xcod#XCOD_0013 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_013">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_006"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_0013">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_0006"/>
         <rdfs:seeAlso>https://www.wikidata.org/wiki/Q109828918</rdfs:seeAlso>
         <skos:prefLabel xml:lang="en">hypsography dataset</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/xcod#XCOD_014 -->
+    <!-- https://purl.org/eticaai/xcod#XCOD_0014 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_014">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_006"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_0014">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_0006"/>
         <rdfs:seeAlso>https://www.wikidata.org/wiki/Property:P16</rdfs:seeAlso>
         <rdfs:seeAlso>https://www.wikidata.org/wiki/Q924286</rdfs:seeAlso>
         <skos:prefLabel xml:lang="en">transport network dataset</skos:prefLabel>
@@ -250,139 +303,139 @@ Previous. An information content entity is a non-realizable information entity t
     
 
 
-    <!-- https://purl.org/eticaai/xcod#XCOD_015 -->
+    <!-- https://purl.org/eticaai/xcod#XCOD_0015 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_015">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_006"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_0015">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_0006"/>
         <rdfs:comment xml:lang="en">TODO: not sure which name to use for this this terminology. Already existing concepts are (https://en.wikipedia.org/wiki/Common_operational_picture) and situation awareness (https://en.wikipedia.org/wiki/Situation_awareness). (note 2) Okay, COP is used here https://www.dhs.gov/publication/common-operating-picture-emergency-responders</rdfs:comment>
         <skos:altLabel xml:lang="en">Humanitarian Profile CODs (COD-HP)</skos:altLabel>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/xcod#XCOD_016 -->
+    <!-- https://purl.org/eticaai/xcod#XCOD_0016 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_016">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_010"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_0016">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_0010"/>
         <rdfs:seeAlso>https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative</rdfs:seeAlso>
         <skos:prefLabel xml:lang="en">administrative boundary geospatial dataset</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/xcod#XCOD_017 -->
+    <!-- https://purl.org/eticaai/xcod#XCOD_0017 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_017">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_006"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_0017">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_0006"/>
         <skos:prefLabel xml:lang="en">demography dataset</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/xcod#XCOD_018 -->
+    <!-- https://purl.org/eticaai/xcod#XCOD_0018 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_018">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_017"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_0018">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_0017"/>
         <rdfs:seeAlso xml:lang="en">https://www.wikidata.org/wiki/Property:P1082</rdfs:seeAlso>
         <skos:prefLabel xml:lang="en">baseline population dataset</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/xcod#XCOD_019 -->
+    <!-- https://purl.org/eticaai/xcod#XCOD_0019 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_019">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_017"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_0019">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_0017"/>
         <rdfs:seeAlso>https://www.wikidata.org/wiki/Q852082</rdfs:seeAlso>
         <skos:prefLabel xml:lang="en">population geography dataset</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/xcod#XCOD_020 -->
+    <!-- https://purl.org/eticaai/xcod#XCOD_0020 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_020">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_017"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_0020">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_0017"/>
         <rdfs:seeAlso>https://www.wikidata.org/wiki/Q1965979</rdfs:seeAlso>
         <skos:prefLabel xml:lang="en">demographic statistics dataset</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/xcod#XCOD_021 -->
+    <!-- https://purl.org/eticaai/xcod#XCOD_0021 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_021">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_017"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_0021">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_0017"/>
         <rdfs:seeAlso>https://www.wikidata.org/wiki/Q2369019</rdfs:seeAlso>
         <skos:prefLabel xml:lang="en">population projection dataset</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/xcod#XCOD_022 -->
+    <!-- https://purl.org/eticaai/xcod#XCOD_0022 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_022">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_014"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_0022">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_0014"/>
         <rdfs:seeAlso>https://www.wikidata.org/wiki/Q358078</rdfs:seeAlso>
         <skos:prefLabel xml:lang="en">road network dataset</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/xcod#XCOD_023 -->
+    <!-- https://purl.org/eticaai/xcod#XCOD_0023 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_023">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_014"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_0023">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_0014"/>
         <rdfs:seeAlso>https://www.wikidata.org/wiki/Q2678338</rdfs:seeAlso>
         <skos:prefLabel xml:lang="en">railway network dataset</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/xcod#XCOD_024 -->
+    <!-- https://purl.org/eticaai/xcod#XCOD_0024 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_024">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_014"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_0024">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_0014"/>
         <rdfs:seeAlso>https://www.wikidata.org/wiki/Q12280</rdfs:seeAlso>
         <skos:prefLabel xml:lang="en">bridge dataset</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/xcod#XCOD_025 -->
+    <!-- https://purl.org/eticaai/xcod#XCOD_0025 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_025">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_014"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_0025">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_0014"/>
         <rdfs:seeAlso>https://www.wikidata.org/wiki/Q44782</rdfs:seeAlso>
         <skos:prefLabel xml:lang="en">port dataset</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/xcod#XCOD_026 -->
+    <!-- https://purl.org/eticaai/xcod#XCOD_0026 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_026">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_014"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_0026">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_0014"/>
         <rdfs:seeAlso>https://www.wikidata.org/wiki/Q62447</rdfs:seeAlso>
         <skos:prefLabel xml:lang="en">aerodrome dataset</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/xcod#XCOD_027 -->
+    <!-- https://purl.org/eticaai/xcod#XCOD_0027 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_027">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_026"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_0027">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_0026"/>
         <rdfs:seeAlso>https://www.wikidata.org/wiki/Q1248784</rdfs:seeAlso>
         <skos:prefLabel xml:lang="en">airport dataset</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/xcod#XCOD_028 -->
+    <!-- https://purl.org/eticaai/xcod#XCOD_0028 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_028">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_026"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/xcod#XCOD_0028">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/xcod#XCOD_0026"/>
         <rdfs:seeAlso>https://www.wikidata.org/wiki/Q534159</rdfs:seeAlso>
         <skos:prefLabel xml:lang="en">helipad dataset</skos:prefLabel>
     </owl:Class>
@@ -391,4 +444,3 @@ Previous. An information content entity is a non-realizable information entity t
 
 
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
-
