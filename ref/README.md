@@ -1,4 +1,7 @@
+# References
 
+- [1996_odi_rwanda-genocide-hum-aid-lessons.pdf](1996_odi_rwanda-genocide-hum-aid-lessons.pdf)
+  - https://www.alnap.org/help-library/the-international-response-to-conflict-and-genocide-lessons-from-the-rwanda-1
 - [2008_ocha_profiling-idps.pdf](2008_ocha_profiling-idps.pdf)
   - https://www.humanitarianresponse.info/topics/imwg/document/guidance-profiling-internally-displaced-persons-idmc-ocha
 - [2010_iasc_cod-guidelines.pdf](2010_iasc_cod-guidelines.pdf)
@@ -29,6 +32,10 @@
     - https://groups.google.com/g/coi-data-scramble
     - https://trello.com/b/b2vwU0LS/earthquakes-coordinated-data-scramble
     - https://docs.google.com/document/d/1iJCYQ8kodG-Fctir6i5Nfvs3XjlFSAIz4cvnqUGp2No/edit
+- [2022_ocha_indicators-registry-list.csv](2022_ocha_indicators-registry-list.csv)
+  - https://ir.hpc.tools/indicators
+  - https://ir.hpc.tools/export/indicators/index.csv
+
 
 - @TODO
   - https://www.humanitarianresponse.info/en/topics/imwg/document/desk-review-rapid-estimation-affected-population-figures-2012-acaps
