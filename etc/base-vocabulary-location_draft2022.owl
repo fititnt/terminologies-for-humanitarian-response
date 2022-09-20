@@ -7,15 +7,13 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#">
-    <owl:Ontology rdf:about="https://purl.org/eticaai/yahea/codvl#CODVL_000">
+    <owl:Ontology rdf:about="https://purl.org/eticaai/yahea/codvl#">
         <owl:versionIRI rdf:resource="https://raw.githubusercontent.com/fititnt/yet-another-ontology-for-humanitarian-emergency-assistance/main/etc/base-vocabulary-location_draft2022.owl#"/>
-        <rdfs:comment>TODO:
-- https://stackoverflow.com/questions/63253823/how-to-define-rule-for-sum-data-values-in-protege
-  - https://github.com/protegeproject/swrlapi/wiki/SQWRLCore#Aggregation</rdfs:comment>
         <rdfs:label>base-vocabulary-location_draft2022</rdfs:label>
-        <rdfs:seeAlso>https://sciendo.com/pdf/10.2478/jos-2020-0001</rdfs:seeAlso>
-        <rdfs:seeAlso>https://web.archive.org/web/https://www.humanitarianresponse.info/sites/www.humanitarianresponse.info/files/documents/files/humanitarianprofilesupportguidance_final_may2016.pdf</rdfs:seeAlso>
-        <rdfs:seeAlso>https://www.humanitarianresponse.info/en/programme-cycle/space/document/humanitarian-profile-support-guidance</rdfs:seeAlso>
+        <rdfs:seeAlso>http://web.archive.org/web/20220123033625/https://sites.google.com/site/ochaimwiki/geodata-preparation-manual/p-code-guidelines</rdfs:seeAlso>
+        <rdfs:seeAlso>http://web.archive.org/web/20220920041420/https://docs.google.com/viewer?a=v&amp;pid=sites&amp;srcid=ZGVmYXVsdGRvbWFpbnxvY2hhaW13aWtpfGd4Ojc4YTljNmEwNmM3MjkwNWU</rdfs:seeAlso>
+        <rdfs:seeAlso>https://docs.google.com/viewer?a=v&amp;pid=sites&amp;srcid=ZGVmYXVsdGRvbWFpbnxvY2hhaW13aWtpfGd4Ojc4YTljNmEwNmM3MjkwNWU</rdfs:seeAlso>
+        <rdfs:seeAlso>https://sites.google.com/site/ochaimwiki/geodata-preparation-manual/p-code-guidelines</rdfs:seeAlso>
     </owl:Ontology>
     
 
@@ -31,15 +29,49 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#definition -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://purl.org/eticaai/yahea/codvl#1 -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/eticaai/yahea/codvl#1">
+        <rdfs:isDefinedBy>https://sites.google.com/site/ochaimwiki/geodata-preparation-manual/p-code-guidelines</rdfs:isDefinedBy>
+        <skos:altLabel>P-code</skos:altLabel>
+        <skos:definition xml:lang="en">P-codes are unique geographic (geo) identification codes, represented by combinations of letters and/or numbers to identify a specific location or feature on a map or within a database. For specific place, point, or positional locations, the geo-codes have come into common usages as P-codes (abbreviated for Place-code).</skos:definition>
+        <skos:prefLabel xml:lang="pt">Place-code</skos:prefLabel>
+    </owl:DatatypeProperty>
     
 
 
@@ -54,15 +86,45 @@
     
 
 
-    <!-- https://purl.org/eticaai/yahea/codvl#CODVL_0001 -->
+    <!-- https://purl.org/eticaai/yahea/codvl#2 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/yahea/codvl#CODVL_0001">
-        <rdfs:label xml:lang="en">total population (needs assessment)</rdfs:label>
-        <rdfs:seeAlso>https://www.wikidata.org/wiki/Q4118620</rdfs:seeAlso>
+    <owl:Class rdf:about="https://purl.org/eticaai/yahea/codvl#2">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/codvl#5"/>
+        <rdfs:label xml:lang="en">place (P-code encoded)</rdfs:label>
         <skos:definition xml:lang="en">de facto population of the region</skos:definition>
     </owl:Class>
     
 
+
+    <!-- https://purl.org/eticaai/yahea/codvl#3 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/yahea/codvl#3">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/codvl#2"/>
+        <skos:prefLabel xml:lang="en">administrative division</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/yahea/codvl#4 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/yahea/codvl#4">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:complementOf rdf:resource="https://purl.org/eticaai/yahea/codvl#2"/>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/codvl#5"/>
+        <skos:example xml:lang="en">any place or location not explicitly encoded with P-codes</skos:example>
+        <skos:prefLabel xml:lang="en">generic place</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/yahea/codvl#5 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/yahea/codvl#5">
+        <skos:prefLabel xml:lang="pt">location</skos:prefLabel>
+    </owl:Class>
 </rdf:RDF>
 
 
