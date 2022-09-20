@@ -5,16 +5,41 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://purl.org/eticaai/yahea/cod-hp#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="https://purl.org/eticaai/yahea/cod-hp#HP_000">
         <owl:versionIRI rdf:resource="https://raw.githubusercontent.com/fititnt/yet-another-ontology-for-humanitarian-emergency-assistance/main/etc/humanitarian-profile_draft2022.owl#"/>
         <rdfs:comment>TODO:
 - https://stackoverflow.com/questions/63253823/how-to-define-rule-for-sum-data-values-in-protege
   - https://github.com/protegeproject/swrlapi/wiki/SQWRLCore#Aggregation</rdfs:comment>
         <rdfs:label>humanitarian-profile_draft2022</rdfs:label>
+        <rdfs:seeAlso>https://sciendo.com/pdf/10.2478/jos-2020-0001</rdfs:seeAlso>
         <rdfs:seeAlso>https://web.archive.org/web/https://www.humanitarianresponse.info/sites/www.humanitarianresponse.info/files/documents/files/humanitarianprofilesupportguidance_final_may2016.pdf</rdfs:seeAlso>
         <rdfs:seeAlso>https://www.humanitarianresponse.info/en/programme-cycle/space/document/humanitarian-profile-support-guidance</rdfs:seeAlso>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
     
 
 
@@ -29,93 +54,162 @@
     
 
 
-    <!-- https://purl.org/eticaai/yahea/cod-hp#1 -->
+    <!-- https://purl.org/eticaai/yahea/cod-hp#HP_0001 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#1">
-        <rdfs:label xml:lang="en">total population</rdfs:label>
+    <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#HP_0001">
+        <rdfs:label xml:lang="en">total population (needs assessment)</rdfs:label>
+        <rdfs:seeAlso>https://www.wikidata.org/wiki/Q4118620</rdfs:seeAlso>
+        <skos:definition xml:lang="en">de facto population of the region</skos:definition>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/yahea/cod-hp#10 -->
+    <!-- https://purl.org/eticaai/yahea/cod-hp#HP_0002 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#10">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/cod-hp#7"/>
-        <rdfs:label>variātiōnī populātiō</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.org/eticaai/yahea/cod-hp#2 -->
-
-    <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#2">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/cod-hp#1"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#HP_0002">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/cod-hp#HP_0001"/>
         <rdfs:label xml:lang="en">population affected</rdfs:label>
+        <skos:definition xml:lang="en">all those whose lives have been impacted as a direct result of the event</skos:definition>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/yahea/cod-hp#3 -->
+    <!-- https://purl.org/eticaai/yahea/cod-hp#HP_0003 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#3">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/cod-hp#2"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#HP_0003">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/cod-hp#HP_0002"/>
         <rdfs:label xml:lang="en">population in need</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/yahea/cod-hp#4 -->
+    <!-- https://purl.org/eticaai/yahea/cod-hp#HP_0004 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#4">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/cod-hp#3"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#HP_0004">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/cod-hp#HP_0003"/>
         <rdfs:label xml:lang="en">population targeted</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/yahea/cod-hp#5 -->
+    <!-- https://purl.org/eticaai/yahea/cod-hp#HP_0005 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#5">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/cod-hp#4"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#HP_0005">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/cod-hp#HP_0004"/>
         <rdfs:label xml:lang="en">population reached</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/yahea/cod-hp#6 -->
+    <!-- https://purl.org/eticaai/yahea/cod-hp#HP_0006 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#6">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/cod-hp#7"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#HP_0006">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/cod-hp#HP_0007"/>
         <rdfs:label xml:lang="en">baseline population (de jure)</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/yahea/cod-hp#7 -->
+    <!-- https://purl.org/eticaai/yahea/cod-hp#HP_0007 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#7">
+    <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#HP_0007">
         <rdfs:label xml:lang="en">population statistics</rdfs:label>
         <rdfs:seeAlso>http://latindictionary.wikidot.com/portable:latin-prepositions</rdfs:seeAlso>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/yahea/cod-hp#8 -->
+    <!-- https://purl.org/eticaai/yahea/cod-hp#HP_0008 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#8">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/cod-hp#10"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#HP_0008">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/cod-hp#HP_0010"/>
         <rdfs:comment xml:lang="en">https://en.wiktionary.org/wiki/extra#Latin</rdfs:comment>
         <rdfs:label>extrā populātiōnem</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/yahea/cod-hp#9 -->
+    <!-- https://purl.org/eticaai/yahea/cod-hp#HP_0009 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#9">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/cod-hp#10"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#HP_0009">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/cod-hp#HP_0010"/>
         <rdfs:label>sine populātiōne</rdfs:label>
         <rdfs:seeAlso>https://en.wiktionary.org/wiki/sine#Latin</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/yahea/cod-hp#HP_0010 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#HP_0010">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/cod-hp#HP_0007"/>
+        <rdfs:label>variātiōnī populātiō</rdfs:label>
+        <rdfs:seeAlso>https://en.wiktionary.org/wiki/variatio#Latin</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/yahea/cod-hp#HP_0011 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#HP_0011">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/cod-hp#HP_0007"/>
+        <rdfs:label>total population (de facto)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/yahea/cod-hp#HP_000:HP_0012 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#HP_000:HP_0012">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:complementOf rdf:resource="https://purl.org/eticaai/yahea/cod-hp#HP_0002"/>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/cod-hp#HP_0001"/>
+        <skos:prefLabel xml:lang="pt">population not affected</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/yahea/cod-hp#HP_000:HP_0013 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#HP_000:HP_0013">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:complementOf rdf:resource="https://purl.org/eticaai/yahea/cod-hp#HP_0003"/>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/cod-hp#HP_0002"/>
+        <skos:prefLabel xml:lang="pt">population not in need</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/yahea/cod-hp#HP_000:HP_0014 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#HP_000:HP_0014">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:complementOf rdf:resource="https://purl.org/eticaai/yahea/cod-hp#HP_0004"/>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/cod-hp#HP_0003"/>
+        <skos:prefLabel xml:lang="pt">population not targeted</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/yahea/cod-hp#HP_000:HP_0016 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#HP_000:HP_0016">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:complementOf rdf:resource="https://purl.org/eticaai/yahea/cod-hp#HP_0005"/>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/cod-hp#HP_0004"/>
+        <skos:prefLabel xml:lang="pt">population not reached</skos:prefLabel>
     </owl:Class>
 </rdf:RDF>
 

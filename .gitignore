@@ -2,3 +2,8 @@
 dcohea.owl
 catalog-v001.xml
 ref/2013_ochaimwiki
+
+
+# - https://stackoverflow.com/questions/60819049/protege-owl-calculate-the-sum-of-a-property-of-the-children-of-a-class
+#   - https://sourceforge.net/p/meloproject/code/ci/master/tree/OWL/examples/list_sum.owl
+etc/list_sum.owl
