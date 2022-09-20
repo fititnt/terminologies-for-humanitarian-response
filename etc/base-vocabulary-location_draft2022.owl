@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://purl.org/eticaai/yahea/codvl#"
-     xml:base="https://purl.org/eticaai/yahea/codvl"
+<rdf:RDF xmlns="https://purl.org/eticaai/yahea/codv-location#"
+     xml:base="https://purl.org/eticaai/yahea/codv#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -8,8 +8,8 @@
      xmlns:codv="https://purl.org/eticaai/yahea/codv#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#">
-    <owl:Ontology rdf:about="https://purl.org/eticaai/yahea/codvl#">
-        <owl:versionIRI rdf:resource="https://raw.githubusercontent.com/fititnt/yet-another-ontology-for-humanitarian-emergency-assistance/main/etc/base-vocabulary-location_draft2022.owl#"/>
+    <owl:Ontology rdf:about="https://purl.org/eticaai/yahea/codv#">
+        <owl:versionIRI rdf:resource="https://purl.org/eticaai/yahea/codv-location#"/>
         <rdfs:label>base-vocabulary-location_draft2022</rdfs:label>
         <rdfs:seeAlso>http://web.archive.org/web/20220123033625/https://sites.google.com/site/ochaimwiki/geodata-preparation-manual/p-code-guidelines</rdfs:seeAlso>
         <rdfs:seeAlso>http://web.archive.org/web/20220920041420/https://docs.google.com/viewer?a=v&amp;pid=sites&amp;srcid=ZGVmYXVsdGRvbWFpbnxvY2hhaW13aWtpfGd4Ojc4YTljNmEwNmM3MjkwNWU</rdfs:seeAlso>
@@ -65,9 +65,9 @@
     
 
 
-    <!-- https://purl.org/eticaai/yahea/codvl#1 -->
+    <!-- https://purl.org/eticaai/yahea/codv#CODVL_0001 -->
 
-    <owl:DatatypeProperty rdf:about="https://purl.org/eticaai/yahea/codvl#1">
+    <owl:DatatypeProperty rdf:about="https://purl.org/eticaai/yahea/codv#CODVL_0001">
         <rdfs:isDefinedBy>https://sites.google.com/site/ochaimwiki/geodata-preparation-manual/p-code-guidelines</rdfs:isDefinedBy>
         <skos:altLabel>P-code</skos:altLabel>
         <skos:definition xml:lang="en">P-codes are unique geographic (geo) identification codes, represented by combinations of letters and/or numbers to identify a specific location or feature on a map or within a database. For specific place, point, or positional locations, the geo-codes have come into common usages as P-codes (abbreviated for Place-code).</skos:definition>
@@ -78,7 +78,7 @@
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
-    //
+    //dd
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -87,43 +87,43 @@
     
 
 
-    <!-- https://purl.org/eticaai/yahea/codvl#2 -->
+    <!-- https://purl.org/eticaai/yahea/codv#CODVL_0002 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/yahea/codvl#2">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/codvl#5"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/yahea/codv#CODVL_0002">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/codv#CODVL_0005"/>
         <rdfs:label xml:lang="en">place (P-code encoded)</rdfs:label>
         <skos:definition xml:lang="en">de facto population of the region</skos:definition>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/yahea/codvl#3 -->
+    <!-- https://purl.org/eticaai/yahea/codv#CODVL_0003 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/yahea/codvl#3">
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/codvl#2"/>
+    <owl:Class rdf:about="https://purl.org/eticaai/yahea/codv#CODVL_0003">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/codv#CODVL_0002"/>
         <skos:prefLabel xml:lang="en">administrative division</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/yahea/codvl#4 -->
+    <!-- https://purl.org/eticaai/yahea/codv#CODVL_0004 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/yahea/codvl#4">
+    <owl:Class rdf:about="https://purl.org/eticaai/yahea/codv#CODVL_0004">
         <owl:equivalentClass>
             <owl:Class>
-                <owl:complementOf rdf:resource="https://purl.org/eticaai/yahea/codvl#2"/>
+                <owl:complementOf rdf:resource="https://purl.org/eticaai/yahea/codv#CODVL_0002"/>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/codvl#5"/>
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/codv#CODVL_0005"/>
         <skos:example xml:lang="en">any place or location not explicitly encoded with P-codes</skos:example>
         <skos:prefLabel xml:lang="en">generic place</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- https://purl.org/eticaai/yahea/codvl#5 -->
+    <!-- https://purl.org/eticaai/yahea/codv#CODVL_0005 -->
 
-    <owl:Class rdf:about="https://purl.org/eticaai/yahea/codvl#5">
+    <owl:Class rdf:about="https://purl.org/eticaai/yahea/codv#CODVL_0005">
         <skos:prefLabel xml:lang="pt">location</skos:prefLabel>
     </owl:Class>
 </rdf:RDF>
@@ -131,4 +131,3 @@
 
 
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
-

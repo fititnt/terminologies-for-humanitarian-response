@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://purl.org/eticaai/yahea/codv#"
-     xml:base="https://purl.org/eticaai/yahea/codv#"
+     xml:base="https://purl.org/eticaai/yahea/codv"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -9,9 +9,10 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#">
     <owl:Ontology rdf:about="https://purl.org/eticaai/yahea/codv#">
-        <owl:imports rdf:resource="https://purl.org/eticaai/yahea/codvd"/>
-        <owl:imports rdf:resource="https://purl.org/eticaai/yahea/codvl"/>
-        <rdfs:label>base-vocabulary-all_draft2022_v2</rdfs:label>
+        <owl:versionIRI rdf:resource="https://purl.org/eticaai/yahea/codv-merged"/>
+        <owl:imports rdf:resource="https://purl.org/eticaai/yahea/codv-location"/>
+        <owl:imports rdf:resource="https://purl.org/eticaai/yahea/codv-demography"/>
+        <rdfs:label>codv-merged_draft2022_v2</rdfs:label>
     </owl:Ontology>
 </rdf:RDF>
 
