@@ -37,6 +37,15 @@
     
 
 
+    <!-- https://purl.org/eticaai/yahea/cod-hp#10 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#10">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/cod-hp#7"/>
+        <rdfs:label>variātiōnī populātiō</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://purl.org/eticaai/yahea/cod-hp#2 -->
 
     <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#2">
@@ -76,7 +85,37 @@
     <!-- https://purl.org/eticaai/yahea/cod-hp#6 -->
 
     <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#6">
-        <rdfs:label xml:lang="en">baseline population (pre-crisis, more stable)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/cod-hp#7"/>
+        <rdfs:label xml:lang="en">baseline population (de jure)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/yahea/cod-hp#7 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#7">
+        <rdfs:label xml:lang="en">population statistics</rdfs:label>
+        <rdfs:seeAlso>http://latindictionary.wikidot.com/portable:latin-prepositions</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/yahea/cod-hp#8 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#8">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/cod-hp#10"/>
+        <rdfs:comment xml:lang="en">https://en.wiktionary.org/wiki/extra#Latin</rdfs:comment>
+        <rdfs:label>extrā populātiōnem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/eticaai/yahea/cod-hp#9 -->
+
+    <owl:Class rdf:about="https://purl.org/eticaai/yahea/cod-hp#9">
+        <rdfs:subClassOf rdf:resource="https://purl.org/eticaai/yahea/cod-hp#10"/>
+        <rdfs:label>sine populātiōne</rdfs:label>
+        <rdfs:seeAlso>https://en.wiktionary.org/wiki/sine#Latin</rdfs:seeAlso>
     </owl:Class>
 </rdf:RDF>
 
