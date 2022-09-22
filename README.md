@@ -26,9 +26,17 @@ OpenStreetMap and [Common Operational Datasets](https://en.wikipedia.org/wiki/Co
 - [etc/](etc/)
   - [etc/codv_draft2022.owl](etc/codv_draft2022.owl)
 
+[![img/yaohea_codv-merged.png](img/yaohea_codv-merged.png)](etc/codv_draft2022.owl)
+
 <!--
 - Country Country-specific CODs (instead of FODs) labeled on Wikipedia around 2018
   - https://en.wikipedia.org/w/index.php?title=Common_Operational_Datasets&type=revision&diff=850537442&oldid=816439628
+
+
+Run jekyll locally
+- bundle install
+- bundle exec jekyll serve
+
 -->
 
 <!-- ## Where are the other ontologies? -->
