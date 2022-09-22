@@ -1,5 +1,5 @@
-# yet-another-ontology-for-humanitarian-emergency-assistance
-**Yet Another Ontology for Humanitarian Emergency Assistance contexts...**
+# YAOHEA - Yet Another Ontology for Humanitarian Emergency Assistance
+**YAOHEA is an ontology for humanitarian emergency assistance...**
 **_but_ also engineered with the Basic Formal Ontology (ISO/IEC 21838-2:2021 version)**.
 Why BFO? It is the most used top level ontology (i.e. best interoperability on scientific research),
 but also means philosophy ([mereology](https://en.wikipedia.org/wiki/Mereology)) becomes a requisite to a point [RDF](https://en.wikipedia.org/wiki/Resource_Description_Framework) feels easy. So. Much. Fun!
@@ -21,6 +21,10 @@ OpenStreetMap and [Common Operational Datasets](https://en.wikipedia.org/wiki/Co
     - Actually, the harder concept is which universal is represented on _Humanitarian Profile_. The idea of common operational datasets (note the lower case) still exists (at least in military contexts).
 - The good news is: do exist data collections which are (while not exact same name) in use in different communities!
   - Then, some work to abstract the underlying idea can allow search more data while simplifying how to tag content (which could work regardless of cultures)
+
+### `etc/`
+- [etc/](etc/)
+  - [etc/codv_draft2022.owl](etc/codv_draft2022.owl)
 
 <!--
 - Country Country-specific CODs (instead of FODs) labeled on Wikipedia around 2018

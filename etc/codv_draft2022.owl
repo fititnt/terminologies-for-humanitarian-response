@@ -12,6 +12,7 @@
         <owl:versionIRI rdf:resource="https://purl.org/eticaai/yahea/codv-merged"/>
         <owl:imports rdf:resource="https://purl.org/eticaai/yahea/codv-location"/>
         <owl:imports rdf:resource="https://purl.org/eticaai/yahea/codv-demography"/>
+        <owl:imports rdf:resource="https://purl.org/eticaai/yahea/codv-profile"/>
         <rdfs:label>codv-merged_draft2022_v2</rdfs:label>
     </owl:Ontology>
 </rdf:RDF>
