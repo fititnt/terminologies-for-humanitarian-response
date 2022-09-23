@@ -10,3 +10,20 @@
 - https://pygeoapi.io/documentation/
   - https://pygeoapi.io/presentations/foss4g2022/
 - https://stacspec.org/en
+
+
+<!--
+cd geo/pygeoapi
+pip install pygeoapi
+
+# Ref conf https://raw.githubusercontent.com/geopython/pygeoapi/master/pygeoapi-config.yml 
+# https://docs.pygeoapi.io/en/stable/configuration.html#linked-data
+
+
+pygeoapi openapi generate pygeoapi-config.yml > pygeoapi-openapi.yml
+
+export PYGEOAPI_CONFIG=/workspace/git/fititnt/yet-another-ontology-for-humanitarian-emergency-assistance/geo/pygeoapi/pygeoapi-config.yml
+export PYGEOAPI_OPENAPI=/workspace/git/fititnt/yet-another-ontology-for-humanitarian-emergency-assistance/geo/pygeoapi/pygeoapi-openapi.yml
+
+pygeoapi serve
+-->
