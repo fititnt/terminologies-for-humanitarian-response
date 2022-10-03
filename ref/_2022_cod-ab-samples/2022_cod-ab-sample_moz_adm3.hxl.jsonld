@@ -1,7 +1,7 @@
 {
   "$schema": "https://urn.etica.ai/urn:cod:jsonschema:ab",
-  "@context": "https://urn.etica.ai/urn:cod:jsonld:context:ab",
-  "@id": "urn:cod:data:ab:mz?abl=3",
+  "@context": "https://urn.etica.ai/urn:cod:jsonld:context:ab:3",
+  "@id": "urn:cod:data:ab:3:mz",
   "data": [
     {
       "#adm3+name+i_pt": "7 De Abril",

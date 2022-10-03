@@ -17,6 +17,19 @@
     "xml": "http://www.w3.org/XML/1998/namespace",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "hydra": "http://www.w3.org/ns/hydra/core#",
-    "@vocab": "http://example.org/temp#"
+    "wdata": "http://www.wikidata.org/wiki/Special:EntityData/",
+    "@vocab": "urn:x-devnull:",
+    "pcode": "urn:cod:data:p:",
+    "pcodel2": "urn:cod:data:p:",
+    "admin2Pcode": {
+      "@id": "pcodel2",
+      "@type": "@id"
+    },
+    "#adm2+code": "admin2Pcode",
+    "date": {
+      "@id": "admin2Pcode",
+      "@type": "schema:datePublished"
+    },
+    "data": "@nest"
   }
 }
