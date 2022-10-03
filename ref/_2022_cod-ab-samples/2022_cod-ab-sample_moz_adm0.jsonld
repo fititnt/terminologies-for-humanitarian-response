@@ -1,0 +1,23 @@
+{
+  "$schema": "https://urn.etica.ai/urn:cod:jsonld:context:ab",
+  "@id": "urn:cod:data:ab:mz?abl=0",
+  "data": [
+    {
+      "OBJECTID *": 1,
+      "Shape *": "Polygon",
+      "admin0Name_en": "Mozambique",
+      "admin0Name_pt": "Moçambique",
+      "admin0Pcode": "MZ",
+      "admin0RefName": "Mocambique",
+      "admin0AltName1_en": null,
+      "admin0AltName2_en": null,
+      "admin0AltName1_pt": null,
+      "admin0AltName2_pt": null,
+      "date": "02/04/2019",
+      "validOn": "07/06/2019",
+      "validTo": null,
+      "Shape_Length": "96,656088",
+      "Shape_Area": "67,039658"
+    }
+  ]
+}

@@ -18,7 +18,13 @@ but the URIs are not granted to be permanent.
 > _"An ontology is a formal, explicit specification of a shared conceptualization."_
 > -- https://iaoa.org/isc2012/docs/Guarino2009_What_is_an_Ontology.pdf
 
-### `xcod.owl`
+### `etc/`
+- [etc/](etc/)
+  - [etc/codv_draft2022.owl](etc/codv_draft2022.owl)
+
+[![img/yaohea_codv-merged.png](img/yaohea_codv-merged.png)](etc/codv_draft2022.owl)
+
+### `xcod.owl` (old, needs refactoring)
 
 - At the moment, the [xcod.owl](xcod.owl) is a rudimentar mapping from Wikidata,
 OpenStreetMap and [Common Operational Datasets](https://en.wikipedia.org/wiki/Common_Operational_Datasets).
@@ -26,12 +32,6 @@ OpenStreetMap and [Common Operational Datasets](https://en.wikipedia.org/wiki/Co
     - Actually, the harder concept is which universal is represented on _Humanitarian Profile_. The idea of common operational datasets (note the lower case) still exists (at least in military contexts).
 - The good news is: do exist data collections which are (while not exact same name) in use in different communities!
   - Then, some work to abstract the underlying idea can allow search more data while simplifying how to tag content (which could work regardless of cultures)
-
-### `etc/`
-- [etc/](etc/)
-  - [etc/codv_draft2022.owl](etc/codv_draft2022.owl)
-
-[![img/yaohea_codv-merged.png](img/yaohea_codv-merged.png)](etc/codv_draft2022.owl)
 
 <!--
 - Country Country-specific CODs (instead of FODs) labeled on Wikipedia around 2018

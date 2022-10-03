@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://urn.etica.ai/urn:cod:jsonld:context:ab",
+  "title": "JSON-Schema context for common operational datasets of kind administrative boundaries.",
+  "description": "Early draft from Etica.AI (feedback at rocha@ieee.org). Uses as reference Common Operational Datasets from UN OCHA. Public domain.",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "properties": {
+    "$id": {
+      "type": "string"
+    },
+    "@id": {
+      "type": "string"
+    },
+    "$schema": {
+      "type": "string"
+    },
+    "data": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/cod-ab"
+      }
+    }
+  },
+  "required": [
+    "data"
+  ],
+  "$defs": {
+    "cod-ab": {
+      "type": "object",
+      "required": [
+        "admin0Pcode"
+      ],
+      "properties": {
+        "admin0Pcode": {
+          "type": "string"
+        },
+        "admin1Pcode": {
+          "type": "string"
+        },
+        "admin2Pcode": {
+          "type": "string"
+        },
+        "admin3Pcode": {
+          "type": "string"
+        },
+        "admin4Pcode": {
+          "type": "string"
+        },
+        "admin3RefName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}
