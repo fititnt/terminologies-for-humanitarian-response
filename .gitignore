@@ -12,4 +12,4 @@ _site
 Gemfile.lock
 .bundle
 vendor
-geo/pygeoapi
+etc/_geo/pygeoapi
