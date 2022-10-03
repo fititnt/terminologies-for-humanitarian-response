@@ -15,10 +15,20 @@
     "$schema": {
       "type": "string"
     },
+    "@context": {
+      "type": "string"
+    },
     "data": {
       "type": "array",
       "items": {
-        "$ref": "#/$defs/cod-ab"
+        "oneOf": [
+          {
+            "$ref": "#/$defs/cod-ab-hxl"
+          },
+          {
+            "$ref": "#/$defs/cod-ab-plain"
+          }
+        ]
       }
     }
   },
@@ -26,32 +36,101 @@
     "data"
   ],
   "$defs": {
-    "cod-ab": {
+    "cod-ab-hxl": {
+      "type": "object",
+      "required": [
+        "#country+code"
+      ],
+      "properties": {
+        "#country+code": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$"
+        },
+        "#adm1+code": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}[0-9]{1,12}$"
+        },
+        "#adm2+code": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}[0-9]{1,12}$"
+        },
+        "#adm3+code": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}[0-9]{1,12}$"
+        },
+        "#adm4+code": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}[0-9]{1,12}$"
+        },
+        "#adm3+name+ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "#date": {
+          "type": "string",
+          "format": "date"
+        },
+        "#date+valid_on": {
+          "type": "string",
+          "format": "date"
+        },
+        "#date+valid_to": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        }
+      }
+    },
+    "cod-ab-plain": {
       "type": "object",
       "required": [
         "admin0Pcode"
       ],
       "properties": {
         "admin0Pcode": {
-          "type": "string"
+          "type": "string",
+          "pattern": "^[A-Z]{2}$"
         },
         "admin1Pcode": {
-          "type": "string"
+          "type": "string",
+          "pattern": "^[A-Z]{2}[0-9]{1,12}$"
         },
         "admin2Pcode": {
-          "type": "string"
+          "type": "string",
+          "pattern": "^[A-Z]{2}[0-9]{1,12}$"
         },
         "admin3Pcode": {
-          "type": "string"
+          "type": "string",
+          "pattern": "^[A-Z]{2}[0-9]{1,12}$"
         },
         "admin4Pcode": {
-          "type": "string"
+          "type": "string",
+          "pattern": "^[A-Z]{2}[0-9]{1,12}$"
         },
         "admin3RefName": {
           "type": [
             "string",
             "null"
           ]
+        },
+        "date": {
+          "type": "string",
+          "format": "date"
+        },
+        "validOn": {
+          "type": "string",
+          "format": "date"
+        },
+        "validTo": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
         }
       }
     }

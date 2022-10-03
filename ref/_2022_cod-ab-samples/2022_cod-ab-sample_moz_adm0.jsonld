@@ -1,5 +1,6 @@
 {
-  "$schema": "https://urn.etica.ai/urn:cod:jsonld:context:ab",
+  "$schema": "https://urn.etica.ai/urn:cod:jsonschema:ab",
+  "@context": "https://urn.etica.ai/urn:cod:jsonld:context:ab",
   "@id": "urn:cod:data:ab:mz?abl=0",
   "data": [
     {
