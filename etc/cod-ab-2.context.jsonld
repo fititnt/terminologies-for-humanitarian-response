@@ -23,14 +23,25 @@
       "@id": "urn:cod:voc:p:2",
       "@container": "@list"
     },
+    "date": {
+      "@id": "schema:datePublished",
+      "@type": "xsd:date"
+    },
+    "#date": "date",
+    "validOn": {
+      "@id": "schema:lastReviewed",
+      "@type": "xsd:date"
+    },
+    "#date+valid_on": "validOn",
+    "validTo": {
+      "@id": "schema:expires",
+      "@type": "xsd:date"
+    },
+    "#date+valid_to": "validTo",
     "admin2Pcode": {
       "@id": "urn:cod:prop:p:2",
       "@type": "urn:cod:voc:p:2"
     },
-    "#adm2+code": "admin2Pcode",
-    "date": {
-      "@id": "schema:datePublished",
-      "@type": "xsd:date"
-    }
+    "#adm2+code": "admin2Pcode"
   }
 }

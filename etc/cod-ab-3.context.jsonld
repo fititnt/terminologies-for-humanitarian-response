@@ -23,14 +23,33 @@
       "@id": "urn:cod:voc:p:3",
       "@container": "@list"
     },
+    "date": {
+      "@id": "schema:datePublished",
+      "@type": "xsd:date"
+    },
+    "#date": "date",
+    "validOn": {
+      "@id": "schema:lastReviewed",
+      "@type": "xsd:date"
+    },
+    "#date+valid_on": "validOn",
+    "validTo": {
+      "@id": "schema:expires",
+      "@type": "xsd:date"
+    },
+    "#date+valid_to": "validTo",
     "admin3Pcode": {
       "@id": "urn:cod:prop:p:3",
       "@type": "urn:cod:voc:p:3"
     },
     "#adm3+code": "admin3Pcode",
-    "date": {
-      "@id": "schema:datePublished",
-      "@type": "xsd:date"
+    "admin3Name_pt": {
+      "@id": "skos:prefLabel",
+      "@language": "pt"
+    },
+    "admin3Name_en": {
+      "@id": "skos:prefLabel",
+      "@language": "en"
     }
   }
 }

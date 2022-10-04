@@ -23,14 +23,33 @@
       "@id": "urn:cod:v:p:3",
       "@container": "@list"
     },
+    "date": {
+      "@id": "schema:datePublished",
+      "@type": "xsd:date"
+    },
+    "#date": "date",
+    "validOn": {
+      "@id": "schema:lastReviewed",
+      "@type": "xsd:date"
+    },
+    "#date+valid_on": "validOn",
+    "validTo": {
+      "@id": "schema:expires",
+      "@type": "xsd:date"
+    },
+    "#date+valid_to": "validTo",
     "admin0Pcode": {
       "@id": "urn:cod:prop:p:0",
       "@type": "urn:cod:voc:p:0"
     },
     "#country+code": "admin0Pcode",
-    "date": {
-      "@id": "schema:datePublished",
-      "@type": "xsd:date"
+    "admin0Name_en": {
+      "@id": "skos:prefLabel",
+      "@language": "en"
+    },
+    "admin0Name_pt": {
+      "@id": "skos:prefLabel",
+      "@language": "pt"
     }
   }
 }
