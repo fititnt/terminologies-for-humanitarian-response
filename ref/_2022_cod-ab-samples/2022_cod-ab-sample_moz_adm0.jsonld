@@ -1,7 +1,7 @@
 {
   "$schema": "https://urn.etica.ai/urn:cod:jsonschema:ab",
-  "@context": "https://urn.etica.ai/urn:cod:jsonld:context:ab",
-  "@id": "urn:cod:data:ab:mz?abl=0",
+  "@context": "https://urn.etica.ai/urn:cod:jsonld:context:ab:0",
+  "@id": "urn:cod:data:ab:0:mz",
   "data": [
     {
       "OBJECTID *": 1,
@@ -14,11 +14,11 @@
       "admin0AltName2_en": null,
       "admin0AltName1_pt": null,
       "admin0AltName2_pt": null,
-      "date": "02/04/2019",
-      "validOn": "07/06/2019",
+      "date": "2019-04-02",
+      "validOn": "2019-06-07",
       "validTo": null,
-      "Shape_Length": "96,656088",
-      "Shape_Area": "67,039658"
+      "Shape_Length": 96.656088,
+      "Shape_Area": 67.039658
     }
   ]
 }

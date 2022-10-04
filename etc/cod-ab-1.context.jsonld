@@ -18,18 +18,19 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "hydra": "http://www.w3.org/ns/hydra/core#",
     "wdata": "http://www.wikidata.org/wiki/Special:EntityData/",
-    "@vocab": "urn:x-devnull:",
-    "pcode": "urn:cod:data:p:",
-    "pcodel1": "urn:cod:data:p:",
+    "_@vocab": "urn:x-devnull:",
+    "data": {
+      "@id": "urn:cod:voc:p:1",
+      "@container": "@list"
+    },
     "admin1Pcode": {
-      "@id": "pcodel1",
-      "@type": "@id"
+      "@id": "urn:cod:prop:p:1",
+      "@type": "urn:cod:voc:p:1"
     },
     "#adm1+code": "admin1Pcode",
     "date": {
-      "@id": "admin1Pcode",
-      "@type": "schema:datePublished"
-    },
-    "data": "@nest"
+      "@id": "schema:datePublished",
+      "@type": "xsd:date"
+    }
   }
 }
