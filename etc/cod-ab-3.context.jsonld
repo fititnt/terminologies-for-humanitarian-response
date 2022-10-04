@@ -38,7 +38,9 @@
       "@type": "xsd:date"
     },
     "#date+valid_to": "validTo",
-    "admin3Pcode": {
+    "@base" : "urn:cod:data:p/",
+    "admin3Pcode": "@id",
+    "__admin3Pcode": {
       "@id": "urn:cod:prop:p:3",
       "@type": "urn:cod:voc:p:3"
     },

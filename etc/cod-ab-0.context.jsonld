@@ -21,7 +21,7 @@
     "_@vocab": "urn:x-devnull:",
     "data": {
       "@id": "urn:cod:v:p:3",
-      "@container": "@list"
+      "@container": "@set"
     },
     "date": {
       "@id": "schema:datePublished",
@@ -38,7 +38,9 @@
       "@type": "xsd:date"
     },
     "#date+valid_to": "validTo",
-    "admin0Pcode": {
+    "@base" : "urn:cod:data:p/",
+    "admin0Pcode": "@id",
+    "__admin0Pcode": {
       "@id": "urn:cod:prop:p:0",
       "@type": "urn:cod:voc:p:0"
     },

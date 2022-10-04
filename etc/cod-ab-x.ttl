@@ -6,3 +6,13 @@
 #   - urn:cod:voc:p:2
 #   - urn:cod:voc:p:3
 #   - urn:cod:voc:p:4
+
+# To avoid use urn: as prefix, see https://github.com/w3c/json-ld-syntax/issues/177#issuecomment-491463215
+
+# @see https://stackoverflow.com/questions/52501572/constructing-iri-from-prefix-and-data-in-json-ld
+# @see https://stackoverflow.com/questions/47397728/json-ld-is-there-any-way-to-specify-the-default-uri-for-the-id-of-a-type-or-t
+
+# Example of prefix from @id value https://tinyurl.com/2n9esgf5
+
+# @TODO message next commit (2022-10-04): 
+#  > 'urn:cod:jsonld:context:ab:* : using @base to test prefix for current @id (without need to change de data structure)'
