@@ -20,7 +20,7 @@
     "wdata": "http://www.wikidata.org/wiki/Special:EntityData/",
     "_@vocab": "urn:x-devnull:",
     "data": {
-      "@id": "urn:cod:v:p:3",
+      "@id": "urn:cod:voc:p:0",
       "@container": "@set"
     },
     "date": {
