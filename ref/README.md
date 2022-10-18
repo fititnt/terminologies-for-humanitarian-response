@@ -53,3 +53,11 @@
   - https://ir.hpc.tools/export/indicators/index.csv
 - https://github.com/mazimweal/mazimweal.github.io
   - https://doi.org/10.3390/ijgi10050324
+
+#### Portuguese/Spanish
+
+- https://www.ceped.ufsc.br/wp-content/uploads/2014/09/Manual-de-Gerenciamento-de-Desastres.pdf
+  - _This document also explain disaster response (...)_
+- http://www.defesacivil.mg.gov.br/images/documentos/Defesa%20Civil/manuais/GLOSSARIO-Dicionario-Defesa-Civil.pdf
+- http://andromeda.ensp.fiocruz.br/desastres/content/terminologia
+- https://www.prefeitura.sp.gov.br/cidade/secretarias/seguranca_urbana/defesa_civil/terminologia_desastres/index.php?p=179948
