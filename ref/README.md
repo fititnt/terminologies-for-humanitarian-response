@@ -53,6 +53,7 @@
   - https://ir.hpc.tools/export/indicators/index.csv
 - https://github.com/mazimweal/mazimweal.github.io
   - https://doi.org/10.3390/ijgi10050324
+- https://download.geofabrik.de/osm-data-in-gis-formats-free.pdf
 
 #### Portuguese/Spanish
 
