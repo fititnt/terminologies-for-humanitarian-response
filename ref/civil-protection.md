@@ -1,5 +1,7 @@
 # civil protection (Q852008)
 
+> Work in progress. Ignore for now (Rocha, 2022-10-22)
+
 <!--
 - https://www.wikidata.org/wiki/Q10427676
 - https://wiki.openstreetmap.org/wiki/User:EmericusPetro/civil_protection
@@ -42,17 +44,6 @@
         eng-Latn: emergency management
         spa-Latn: administración de desastres
         por-Latn: gestão de emergências
-
-- TODO_fix_me_Wikidata:
-  - **civil protection (Q852008)** <https://www.wikidata.org/wiki/Q852008>
-    - has part(s):
-      - **civil defense (Q10427676)** <https://www.wikidata.org/wiki/Q10427676>
-      - **emergency management (Q1460420)** <https://www.wikidata.org/wiki/Q1460420>
-    - OpenStreetMap tag or key: [Tag:emergency=ses_station](https://wiki.openstreetmap.org/wiki/Tag:emergency=ses_station)
-    - Terminology: 
-      - eng-Latn: _civil defense_; <https://en.wikipedia.org/wiki/Civil_defense>
-      - spa-Latn: _protección civil_; <https://es.wikipedia.org/wiki/Protecci%C3%B3n_civil>
-      - por-Latn: _defesa civil_; <https://pt.wikipedia.org/wiki/Defesa_civil>
 ```
 
 <!--

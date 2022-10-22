@@ -40,6 +40,9 @@
 - [2022_ocha_indicators-registry-list.csv](2022_ocha_indicators-registry-list.csv)
   - https://ir.hpc.tools/indicators
   - https://ir.hpc.tools/export/indicators/index.csv
+- [2022-10-22_wikidata_wikidata_osm_keys_or_tags.no1.tm.hxl.csv](2022-10-22_wikidata_wikidata_osm_keys_or_tags.no1.tm.hxl.csv)
+  - https://github.com/fititnt/awesome-spatial-reference-data/blob/main/data/wikidata_osm_keys_or_tags.no1.tm.hxl.csv
+    - https://github.com/fititnt/awesome-spatial-reference-data/blob/main/scripts/etc/wikidata_openstreetmap_tag_or_key.sh
 
 
 - @TODO
