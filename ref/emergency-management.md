@@ -13,9 +13,10 @@
 
 - [emergency management](#emergency-management)
 - [related general concepts](#related-general-concepts)
-- [organizations](#organizations)
+- [Wikidata SPARQL for organizations](#wikidata-sparql-for-organizations)
     - [Option 1](#option-1)
     - [Option 2](#option-2)
+    - [Wikidata, conventions for tagging properties](#wikidata-conventions-for-tagging-properties)
 - [TODO](#todo)
 
 <!-- /TOC -->
@@ -54,8 +55,7 @@
   wikidata: Q7079212
 ```
 
-## organizations 
-
+## Wikidata SPARQL for organizations 
 
 ### Option 1
 ```sparql
@@ -75,27 +75,39 @@ LIMIT 1000
 
 [Try it on Wikidata Query Service](https://query.wikidata.org/#%23%20organizations%3A%20field%20of%20work%20%3D%20emergency%20management%20%28Q1460420%29%20or%20office%20of%20emergency%20management%20%28Q7079212%29%0A%23%20FIXME%3A%20still%20not%20finding%20Q7258782%0ASELECT%20%3Fitem%20%3Flabel%20%3Fcountry%20WHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP101%20wd%3AQ1460420.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%2Ces%2Cpt%2Cde%22.%0A%20%20%20%20%3Fitem%20rdfs%3Alabel%20%3Flabel.%0A%20%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP17%20%3Fcountry.%20%7D%0A%20%20%23%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP1448%20%3Fofficial_name.%20%7D%0A%7D%0ALIMIT%201000)
 
-
 ### Option 2
 
 ```sparql
-# organizations: field of work = emergency management (Q1460420) or office of emergency management (Q7079212)
-# FIXME: still not finding Q7258782
-SELECT ?item ?label ?country WHERE {
-  ?item wdt:P101 wd:Q1460420.
-  ?item wdt:P31 wd:Q327333.
+# organizations: field of work = emergency management (Q1460420)
+SELECT DISTINCT ?item ?label ?country ?operating_area WHERE {
+  ?item wdt:P101 wd:Q1460420;
+    (p:P31/ps:P31/(wdt:P279*)) wd:Q327333.
   SERVICE wikibase:label {
     bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en,es,pt,de".
     ?item rdfs:label ?label.
   }
   OPTIONAL { ?item wdt:P17 ?country. }
-  # OPTIONAL { ?item wdt:P1448 ?official_name. }
+  OPTIONAL { ?item wdt:P2541 ?operating_area. }
 }
+ORDER BY ?country ?operating_area
 LIMIT 1000
 ```
 
-[Try it on Wikidata Query Service](https://query.wikidata.org/#%23%20organizations%3A%20field%20of%20work%20%3D%20emergency%20management%20%28Q1460420%29%20or%20office%20of%20emergency%20management%20%28Q7079212%29%0A%23%20FIXME%3A%20still%20not%20finding%20Q7258782%0ASELECT%20%3Fitem%20%3Flabel%20%3Fcountry%20WHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP101%20wd%3AQ1460420.%0A%20%20%3Fitem%20wdt%3AP31%20wd%3AQ327333.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%2Ces%2Cpt%2Cde%22.%0A%20%20%20%20%3Fitem%20rdfs%3Alabel%20%3Flabel.%0A%20%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP17%20%3Fcountry.%20%7D%0A%20%20%23%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP1448%20%3Fofficial_name.%20%7D%0A%7D%0ALIMIT%201000)
+[Try it on Wikidata Query Service](https://query.wikidata.org/#%23%20organizations%3A%20field%20of%20work%20%3D%20emergency%20management%20%28Q1460420%29%0ASELECT%20DISTINCT%20%3Fitem%20%3Flabel%20%3Fcountry%20%3Foperating_area%20WHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP101%20wd%3AQ1460420%3B%0A%20%20%20%20%28p%3AP31%2Fps%3AP31%2F%28wdt%3AP279%2a%29%29%20wd%3AQ327333.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%2Ces%2Cpt%2Cde%22.%0A%20%20%20%20%3Fitem%20rdfs%3Alabel%20%3Flabel.%0A%20%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP17%20%3Fcountry.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP2541%20%3Foperating_area.%20%7D%0A%7D%0AORDER%20BY%20%3Fcountry%20%3Foperating_area%0ALIMIT%201000)
 
+
+### Wikidata, conventions for tagging properties
+
+- property: **instance of (P31)**
+  - Values: **government agency (Q327333)**
+  - Note: It can be a subtype
+- property: **field of work (P101)**
+  - Values: **emergency management (Q1460420)**
+- property: **operating area (P2541)**
+  - Values: the region, in special if already not the "country")
+  - Examples:
+    - https://www.wikidata.org/wiki/Q7258782
+    - https://www.wikidata.org/wiki/Q107464177
 
 ## TODO
 - As 2022-10-22, several governmental organizations are still not labeled as field of work = emergency management. We need to improve this topic
