@@ -11,17 +11,15 @@
 
 <!-- TOC depthfrom:2 -->
 
-- [emergency management](#emergency-management)
 - [related general concepts](#related-general-concepts)
 - [Wikidata SPARQL for organizations](#wikidata-sparql-for-organizations)
     - [Option 1](#option-1)
     - [Option 2](#option-2)
-    - [Wikidata, conventions for tagging properties](#wikidata-conventions-for-tagging-properties)
+- [Wikidata, conventions for tagging properties](#wikidata-conventions-for-tagging-properties)
+    - [Wikidata, items that do not fit these conventions](#wikidata-items-that-do-not-fit-these-conventions)
 - [TODO](#todo)
 
 <!-- /TOC -->
-
-## emergency management
 
 ## related general concepts
 
@@ -95,8 +93,8 @@ LIMIT 1000
 
 [Try it on Wikidata Query Service](https://query.wikidata.org/#%23%20organizations%3A%20field%20of%20work%20%3D%20emergency%20management%20%28Q1460420%29%0ASELECT%20DISTINCT%20%3Fitem%20%3Flabel%20%3Fcountry%20%3Foperating_area%20WHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP101%20wd%3AQ1460420%3B%0A%20%20%20%20%28p%3AP31%2Fps%3AP31%2F%28wdt%3AP279%2a%29%29%20wd%3AQ327333.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%2Ces%2Cpt%2Cde%22.%0A%20%20%20%20%3Fitem%20rdfs%3Alabel%20%3Flabel.%0A%20%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP17%20%3Fcountry.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP2541%20%3Foperating_area.%20%7D%0A%7D%0AORDER%20BY%20%3Fcountry%20%3Foperating_area%0ALIMIT%201000)
 
+## Wikidata, conventions for tagging properties
 
-### Wikidata, conventions for tagging properties
 
 - property: **instance of (P31)**
   - Values: **government agency (Q327333)**
@@ -108,6 +106,38 @@ LIMIT 1000
   - Examples:
     - https://www.wikidata.org/wiki/Q7258782
     - https://www.wikidata.org/wiki/Q107464177
+
+### Wikidata, items that do not fit these conventions
+
+Note: this list is not comprehensive. They are mostly here to show examples of Wikidata items that would be missed on the conventions. These, however, could be candidates for additional lists in other SPARQL queries.
+
+- **UN System**
+  - United Nations Office for the Coordination of Humanitarian Affairs (Q1065854)
+    - part of United Nations System
+  - United Nations High Commissioner for Refugees (Q132551)
+    - (...)
+- **Foreign aid (not focused on own country; not already UN system; not chacirable organization)**
+  - Office of Foreign Disaster Assistance (Q3347537)
+    - parent organization United States Agency for International Development (Q217072)
+- **Related to military**
+  - U.S. Air Force Emergency Management (Q19878356)
+    - part of United States Air Force (Q11223)
+  - Plan DN-III-E (Q253066) - Mexican Secretariat of National Defense aid operation
+    - instance of military unit (Q176799)
+- **Other reasons**
+  - EURETS (Q1276285) - European Emergency Temporary Shelter
+  - Cabinet Office Briefing Room (Q1790966) - UK emergency committee
+    - instance of committee
+  - MapAction (Q6753712) - UK charitable organization
+    - instance of non-governmental organization
+  - Bundesministerium des Innern. Schutzkommission (Q17354068) - Germany (West)
+    - instance of panel
+  - Disaster Management Bureau (Q48725793)
+    - instance of government organization (Q2659904)
+  - Scientific Advisory Group for Emergencies (Q88096332) - UK government advisory body
+    - instance of advisory board (Q4686866)
+  - University of Washington Population Health Initiative (Q104732823) - Population Health Initiative, University of Washington
+    - instance of university research group (Q28863779)
 
 ## TODO
 - As 2022-10-22, several governmental organizations are still not labeled as field of work = emergency management. We need to improve this topic
