@@ -17,6 +17,7 @@
     - [Option 2](#option-2)
 - [Wikidata, conventions for tagging properties](#wikidata-conventions-for-tagging-properties)
     - [Wikidata, items that do not fit these conventions](#wikidata-items-that-do-not-fit-these-conventions)
+- [Starting points to find more organizations](#starting-points-to-find-more-organizations)
 - [TODO](#todo)
 
 <!-- /TOC -->
@@ -53,7 +54,7 @@
   wikidata: Q7079212
 ```
 
-## Wikidata SPARQL for organizations 
+## Wikidata SPARQL for organizations
 
 ### Option 1
 ```sparql
@@ -95,7 +96,6 @@ LIMIT 1000
 
 ## Wikidata, conventions for tagging properties
 
-
 - property: **instance of (P31)**
   - Values: **government agency (Q327333)**
   - Note: It can be a subtype
@@ -116,7 +116,14 @@ Note: this list is not comprehensive. They are mostly here to show examples of W
     - part of United Nations System
   - United Nations High Commissioner for Refugees (Q132551)
     - (...)
-- **Foreign aid (not focused on own country; not already UN system; not chacirable organization)**
+- **IFRC related**
+  - CADRIM (Q105264524) - Caribbean Disaster Risk Management Resource Center
+    - instance of organization 
+    - part of International Federation of Red Cross and Red Crescent Societies 
+- **International organizations (except UN system and IFRC)**
+  - Caribbean Disaster Emergency Management Agency (Q5039374) - Caribbean Disaster Emergency Response Agency CDEMA
+    - instance of international organization (Q484652)
+- **Foreign aid (not focused on own country; not already UN system; not charitable organization)**
   - Office of Foreign Disaster Assistance (Q3347537)
     - parent organization United States Agency for International Development (Q217072)
 - **Related to military**
@@ -138,6 +145,11 @@ Note: this list is not comprehensive. They are mostly here to show examples of W
     - instance of advisory board (Q4686866)
   - University of Washington Population Health Initiative (Q104732823) - Population Health Initiative, University of Washington
     - instance of university research group (Q28863779)
+
+## Starting points to find more organizations
+- https://en.wikipedia.org/wiki/Office_of_emergency_management
+- https://www.wikidata.org/wiki/Q5039374
+  - See participant section
 
 ## TODO
 - As 2022-10-22, several governmental organizations are still not labeled as field of work = emergency management. We need to improve this topic
