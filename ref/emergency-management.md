@@ -78,23 +78,26 @@ LIMIT 1000
 
 ```sparql
 # organizations: field of work = emergency management (Q1460420)
-SELECT DISTINCT ?item ?label ?country ?operating_area (GROUP_CONCAT(DISTINCT ?official_website; SEPARATOR = "|") AS ?official_websites) WHERE {
+SELECT DISTINCT ?item ?country ?operating_area ?iso3166p2 ?label (GROUP_CONCAT(DISTINCT ?official_website; SEPARATOR = "|") AS ?official_websites) WHERE {
   ?item wdt:P101 wd:Q1460420;
     (p:P31/ps:P31/(wdt:P279*)) wd:Q327333.
   SERVICE wikibase:label {
     bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en,es,pt,de".
     ?item rdfs:label ?label.
   }
-  OPTIONAL { ?item wdt:P17 ?country. }
+  OPTIONAL { 
+    ?item wdt:P17 ?country. 
+    OPTIONAL { ?country wdt:P298 ?iso3166p2. }
+  }
   OPTIONAL { ?item wdt:P2541 ?operating_area. }
   OPTIONAL { ?item wdt:P856 ?official_website. }
 }
-GROUP BY ?item ?label ?country ?operating_area
-ORDER BY (?country) (?operating_area)
+GROUP BY ?item ?label ?country ?operating_area ?iso3166p2
+ORDER BY (?iso3166p2) (?operating_area)
 LIMIT 1000
 ```
 
-[Try it on Wikidata Query Service](https://query.wikidata.org/#%23%20organizations%3A%20field%20of%20work%20%3D%20emergency%20management%20%28Q1460420%29%0ASELECT%20DISTINCT%20%3Fitem%20%3Flabel%20%3Fcountry%20%3Foperating_area%20%28GROUP_CONCAT%28DISTINCT%20%3Fofficial_website%3B%20SEPARATOR%20%3D%20%22%7C%22%29%20AS%20%3Fofficial_websites%29%20WHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP101%20wd%3AQ1460420%3B%0A%20%20%20%20%28p%3AP31%2Fps%3AP31%2F%28wdt%3AP279%2a%29%29%20wd%3AQ327333.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%2Ces%2Cpt%2Cde%22.%0A%20%20%20%20%3Fitem%20rdfs%3Alabel%20%3Flabel.%0A%20%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP17%20%3Fcountry.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP2541%20%3Foperating_area.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP856%20%3Fofficial_website.%20%7D%0A%7D%0AGROUP%20BY%20%3Fitem%20%3Flabel%20%3Fcountry%20%3Foperating_area%0AORDER%20BY%20%28%3Fcountry%29%20%28%3Foperating_area%29%0ALIMIT%201000)
+[Try it on Wikidata Query Service](https://query.wikidata.org/#SELECT%20DISTINCT%20%3Fitem%20%3Fcountry%20%3Foperating_area%20%3Fiso3166p2%20%3Flabel%20%28GROUP_CONCAT%28DISTINCT%20%3Fofficial_website%3B%20SEPARATOR%20%3D%20%22%7C%22%29%20AS%20%3Fofficial_websites%29%20WHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP101%20wd%3AQ1460420%3B%0A%20%20%20%20%28p%3AP31%2Fps%3AP31%2F%28wdt%3AP279%2a%29%29%20wd%3AQ327333.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%2Ces%2Cpt%2Cde%22.%0A%20%20%20%20%3Fitem%20rdfs%3Alabel%20%3Flabel.%0A%20%20%7D%0A%20%20OPTIONAL%20%7B%20%0A%20%20%20%20%3Fitem%20wdt%3AP17%20%3Fcountry.%20%0A%20%20%20%20OPTIONAL%20%7B%20%3Fcountry%20wdt%3AP298%20%3Fiso3166p2.%20%7D%0A%20%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP2541%20%3Foperating_area.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP856%20%3Fofficial_website.%20%7D%0A%7D%0AGROUP%20BY%20%3Fitem%20%3Flabel%20%3Fcountry%20%3Foperating_area%20%3Fiso3166p2%0AORDER%20BY%20%28%3Fiso3166p2%29%20%28%3Foperating_area%29%0ALIMIT%201000)
 
 ## Wikidata, conventions for tagging properties
 
@@ -147,11 +150,14 @@ Note: this list is not comprehensive. They are mostly here to show examples of W
     - instance of advisory board (Q4686866)
   - University of Washington Population Health Initiative (Q104732823) - Population Health Initiative, University of Washington
     - instance of university research group (Q28863779)
+  - Fire and Disaster Management Agency (Q6477686) - An external agency within the MIC in Japan
 
 ## Starting points to find more organizations
-- https://en.wikipedia.org/wiki/Office_of_emergency_management
-- https://www.wikidata.org/wiki/Q5039374
+- DONE! https://en.wikipedia.org/wiki/Office_of_emergency_management
+- DONE! https://www.wikidata.org/wiki/Q5039374
   - See participant section
+- https://en.wikipedia.org/wiki/Civil_defense
+- https://es.wikipedia.org/wiki/Protecci%C3%B3n_civil
 
 ## TODO
 - As 2022-10-22, several governmental organizations are still not labeled as field of work = emergency management. We need to improve this topic
