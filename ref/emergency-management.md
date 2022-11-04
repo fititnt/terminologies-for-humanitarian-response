@@ -1,5 +1,12 @@
 # emergency-management
 
+Please see:
+- <https://www.wikidata.org/wiki/Wikidata:WikiProject_Civil_Defense>
+- <https://wiki.openstreetmap.org/wiki/User:EmericusPetro/sandbox/Civil_defense_organizations>
+
+
+---
+
 > Work in progress. Ignore for now (Rocha, 2022-10-22)
 
 <!--
