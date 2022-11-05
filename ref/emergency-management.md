@@ -26,6 +26,8 @@ Please see:
     - [Wikidata, items that do not fit these conventions](#wikidata-items-that-do-not-fit-these-conventions)
 - [Starting points to find more organizations](#starting-points-to-find-more-organizations)
 - [TODO](#todo)
+- [Temp notes from Wikidata:WikiProject Civil Defense](#temp-notes-from-wikidatawikiproject-civil-defense)
+    - [Items for the tasks](#items-for-the-tasks)
 
 <!-- /TOC -->
 
@@ -170,3 +172,40 @@ Note: this list is not comprehensive. They are mostly here to show examples of W
 - As 2022-10-22, several governmental organizations are still not labeled as field of work = emergency management. We need to improve this topic
 - The SPARQL query still returning people (however it would be necessary fix all items to be governmental organizations before "fix" it)
 - Add more agencies from here https://en.wikipedia.org/wiki/Office_of_emergency_management
+
+## Temp notes from Wikidata:WikiProject Civil Defense
+
+### Items for the tasks
+
+* firefighting (Q897825)
+* search and rescue (Q741964)
+
+
+```sparql
+# firefighting (Q897825)
+SELECT DISTINCT ?item ?itemLabel ?countryLabel ?operating_areaLabel WHERE {
+  ?item wdt:P101 wd:Q897825.
+  OPTIONAL { ?item wdt:P17 ?country. }
+  OPTIONAL { ?item wdt:P2541 ?operating_area. }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en,de,fr,ru,es,ja,zh,ar". }
+}
+ORDER BY (?countryLabel) (?operating_areaLabel)
+LIMIT 2000
+```
+
+[Try it on Wikidata Query Service](https://query.wikidata.org/#%23%20firefighting%20%28Q897825%29%0ASELECT%20DISTINCT%20%3Fitem%20%3FitemLabel%20%3FcountryLabel%20%3Foperating_areaLabel%20WHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP101%20wd%3AQ897825.%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP17%20%3Fcountry.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP2541%20%3Foperating_area.%20%7D%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%2Cde%2Cfr%2Cru%2Ces%2Cja%2Czh%2Car%22.%20%7D%0A%7D%0AORDER%20BY%20%28%3FcountryLabel%29%20%28%3Foperating_areaLabel%29%0ALIMIT%202000)
+
+
+```sparql
+# search and rescue (Q741964)
+SELECT DISTINCT ?item ?itemLabel ?countryLabel ?operating_areaLabel WHERE {
+  ?item wdt:P101 wd:Q741964.
+  OPTIONAL { ?item wdt:P17 ?country. }
+  OPTIONAL { ?item wdt:P2541 ?operating_area. }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en,de,fr,ru,es,ja,zh,ar". }
+}
+ORDER BY (?countryLabel) (?operating_areaLabel)
+LIMIT 2000
+```
+
+[Try it on Wikidata Query Service](https://query.wikidata.org/#%23%20search%20and%20rescue%20%28Q741964%29%0ASELECT%20DISTINCT%20%3Fitem%20%3FitemLabel%20%3FcountryLabel%20%3Foperating_areaLabel%20WHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP101%20wd%3AQ741964.%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP17%20%3Fcountry.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP2541%20%3Foperating_area.%20%7D%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%2Cde%2Cfr%2Cru%2Ces%2Cja%2Czh%2Car%22.%20%7D%0A%7D%0AORDER%20BY%20%28%3FcountryLabel%29%20%28%3Foperating_areaLabel%29%0ALIMIT%202000)
