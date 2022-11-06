@@ -12,6 +12,9 @@
   -  https://pt.wikipedia.org/w/index.php?title=Defesa_civil_no_Brasil&type=revision&diff=63566864&oldid=63566838&diffmode=source
 
 
+## Wikidata
+
+### Defesa civil no Brasil
 ```sparql
 # https://w.wiki/5v2d
 # emergency management (Q1460420) + government agency (Q327333) + Brasil (Q155)
@@ -24,4 +27,45 @@ SELECT DISTINCT ?item ?itemLabel ?operating_areaLabel ?official_website WHERE {
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en,de,fr,ru,es,ja,zh,ar". }
 }
 ORDER BY ?operating_areaLabel
+```
+
+### firefighting
+```sparql
+# firefighting (Q897825)
+SELECT DISTINCT ?item ?itemLabel ?countryLabel ?operating_areaLabel ?official_website WHERE {
+  VALUES ?fow {
+    wd:Q897825
+  }
+  ?item wdt:P101 ?fow.
+  MINUS { ?item wdt:P31 wd:Q5. }
+  OPTIONAL { ?item wdt:P17 ?country. }
+  OPTIONAL { ?item wdt:P2541 ?operating_area. }
+  OPTIONAL { ?item wdt:P856 ?official_website. }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en,de,fr,ru,es,ja,zh,ar". }
+}
+LIMIT 2000
+```
+
+### firefighting v2
+
+```sparql
+# fields_of_work=firefighting (Q897825) OR instance_of=fire department (Q6498663)
+SELECT DISTINCT ?item ?itemLabel ?countryLabel ?operating_areaLabel ?official_website WHERE {
+  VALUES ?instances_of {
+    wd:Q6498663
+  }
+  VALUES ?fields_of_work {
+    wd:Q897825
+  }
+  { ?item wdt:P101 ?fields_of_work. }
+  UNION
+  { ?item (p:P31/ps:P31/(wdt:P279*)) ?instances_of. }
+  MINUS { ?item wdt:P31 wd:Q5. }
+  OPTIONAL { ?item wdt:P17 ?country. }
+  OPTIONAL { ?item wdt:P2541 ?operating_area. }
+  OPTIONAL { ?item wdt:P856 ?official_website. }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en,de,fr,ru,es,ja,zh,ar". }
+}
+ORDER BY (?countryLabel) (?operating_areaLabel)
+LIMIT 5000
 ```
