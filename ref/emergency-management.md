@@ -13,6 +13,9 @@ Please see:
 - https://www.wikidata.org/wiki/Q10427676
 - https://wiki.openstreetmap.org/wiki/User:EmericusPetro/sandbox
 - https://pandoc.org/try/
+- To watch more examples
+  - https://en.wikipedia.org/wiki/Civil_defense
+  - https://en.wikipedia.org/wiki/Civil_defense_by_country
 -->
 
 
@@ -209,3 +212,17 @@ LIMIT 2000
 ```
 
 [Try it on Wikidata Query Service](https://query.wikidata.org/#%23%20search%20and%20rescue%20%28Q741964%29%0ASELECT%20DISTINCT%20%3Fitem%20%3FitemLabel%20%3FcountryLabel%20%3Foperating_areaLabel%20WHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP101%20wd%3AQ741964.%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP17%20%3Fcountry.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP2541%20%3Foperating_area.%20%7D%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%2Cde%2Cfr%2Cru%2Ces%2Cja%2Czh%2Car%22.%20%7D%0A%7D%0AORDER%20BY%20%28%3FcountryLabel%29%20%28%3Foperating_areaLabel%29%0ALIMIT%202000)
+
+
+```sparql
+# emergency management (Q1460420) + government agency (Q327333) + Brasil (Q155)
+SELECT DISTINCT ?item ?itemLabel ?operating_areaLabel WHERE {
+  ?item wdt:P101 wd:Q1460420;
+    (p:P31/ps:P31/(wdt:P279*)) wd:Q327333;
+    wdt:P17 wd:Q155.
+  OPTIONAL { ?item wdt:P2541 ?operating_area. }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en,de,fr,ru,es,ja,zh,ar". }
+}
+ORDER BY (?countryLabel) (?operating_areaLabel)
+```
+[Try it on Wikidata Query Service](https://w.wiki/5v2H)
