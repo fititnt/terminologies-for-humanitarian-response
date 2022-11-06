@@ -49,7 +49,7 @@ LIMIT 2000
 ### firefighting v2
 
 ```sparql
-# fields_of_work=firefighting (Q897825) OR instance_of=fire department (Q6498663)
+# fields_of_work=firefighting (Q897825) OR instance_of=fire department (Q6498663) NOT  human (Q5)
 SELECT DISTINCT ?item ?itemLabel ?countryLabel ?operating_areaLabel ?official_website WHERE {
   VALUES ?instances_of {
     wd:Q6498663
@@ -69,3 +69,58 @@ SELECT DISTINCT ?item ?itemLabel ?countryLabel ?operating_areaLabel ?official_we
 ORDER BY (?countryLabel) (?operating_areaLabel)
 LIMIT 5000
 ```
+
+### emergency medical services
+
+```sparql
+# instances_of=emergency medical services OR fields_of_work=emergency medicine (Q2861470) NOT  human (Q5)
+SELECT DISTINCT ?item ?itemLabel ?countryLabel ?operating_areaLabel ?official_website WHERE {
+  VALUES ?instances_of {
+    wd:Q860447
+  }
+  VALUES ?fields_of_work {
+    wd:Q2861470
+  }
+  { ?item wdt:P101 ?fields_of_work. }
+  UNION
+  { ?item (p:P31/ps:P31/(wdt:P279*)) ?instances_of. }
+  MINUS { ?item wdt:P31 wd:Q5. }
+  OPTIONAL { ?item wdt:P17 ?country. }
+  OPTIONAL { ?item wdt:P2541 ?operating_area. }
+  OPTIONAL { ?item wdt:P856 ?official_website. }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en,de,fr,ru,es,ja,zh,ar". }
+}
+ORDER BY (?countryLabel) (?operating_areaLabel)
+LIMIT 5000
+```
+
+### [empty results] rescue
+- rescue (Q1341429)
+- <s>search and rescue (Q741964)</s>
+
+```sparql
+# rescue (Q1341429) NOT human (Q5)
+SELECT DISTINCT ?item ?itemLabel ?countryLabel ?operating_areaLabel ?official_website WHERE {
+  VALUES ?instances_of {
+    wd:Q1341429
+  }
+  VALUES ?fields_of_work {
+    wd:Q1341429
+  }
+  { ?item wdt:P101 ?fields_of_work. }
+  UNION
+  { ?item (p:P31/ps:P31/(wdt:P279*)) ?instances_of. }
+  MINUS { ?item wdt:P31 wd:Q5. }
+  OPTIONAL { ?item wdt:P17 ?country. }
+  OPTIONAL { ?item wdt:P2541 ?operating_area. }
+  OPTIONAL { ?item wdt:P856 ?official_website. }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en,de,fr,ru,es,ja,zh,ar". }
+}
+ORDER BY (?countryLabel) (?operating_areaLabel)
+LIMIT 5000
+```
+
+
+
+
+- https://pt.wikipedia.org/wiki/Categoria:Empresas_de_energia_el%C3%A9trica_do_Brasil
