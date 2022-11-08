@@ -124,3 +124,24 @@ LIMIT 5000
 
 
 - https://pt.wikipedia.org/wiki/Categoria:Empresas_de_energia_el%C3%A9trica_do_Brasil
+- https://pt.wikipedia.org/wiki/Categoria:Empresas_de_saneamento_do_Brasil
+- https://pt.wikipedia.org/wiki/Categoria:Cemit%C3%A9rios
+
+### Hospitals
+- https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples#Map_of_hospitals
+```sparql
+#added 2017-08
+#defaultView:Map
+SELECT DISTINCT * WHERE {
+  ?item wdt:P31/wdt:P279* wd:Q16917;
+        wdt:P625 ?geo .
+}
+```
+
+## Tips
+
+### Querying property without value with SPARQL in WikiData
+- https://stackoverflow.com/questions/54835069/querying-property-without-value-with-sparql-in-wikidata
+```
+?item wdt:P17 [] .
+```
