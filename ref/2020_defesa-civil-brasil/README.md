@@ -138,10 +138,31 @@ SELECT DISTINCT * WHERE {
 }
 ```
 
+### Nuclear power plant (draft)
+Note: _installations containing dangerous forces_
+
+```sparql
+# nuclear power plant (Q134447)
+SELECT DISTINCT ?item ?itemLabel ?countryLabel ?service_entry ?service_retirement ?official_website WHERE {
+  VALUES ?instances_of {
+    wd:Q134447
+  }
+  ?item (p:P31/ps:P31) ?instances_of.
+  OPTIONAL { ?item wdt:P17 ?country. }
+  OPTIONAL { ?item wdt:P729 ?service_entry. }
+  OPTIONAL { ?item wdt:P730 ?service_retirement. }
+  OPTIONAL { ?item wdt:P856 ?official_website. }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en,de,fr,ru,es,ja,zh,ar". }
+}
+ORDER BY (?countryLabel) (?service_entry) (?operating_areaLabel)
+```
+[Try it on Wikidata Query Service](https://w.wiki/5wPC)
+
+
 ## Tips
 
 ### Querying property without value with SPARQL in WikiData
-- https://stackoverflow.com/questions/54835069/querying-property-without-value-with-sparql-in-wikidata
+- https://stackoverflow.com/questions/59675996/how-to-find-items-with-no-value-for-a-property
 ```
-?item wdt:P17 [] .
+FILTER NOT EXISTS { ?item wdt:P17 ?val }
 ```
