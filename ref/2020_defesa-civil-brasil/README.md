@@ -154,9 +154,27 @@ SELECT DISTINCT ?item ?itemLabel ?countryLabel ?service_entry ?service_retiremen
   OPTIONAL { ?item wdt:P856 ?official_website. }
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en,de,fr,ru,es,ja,zh,ar". }
 }
-ORDER BY (?countryLabel) (?service_entry) (?operating_areaLabel)
+ORDER BY (?countryLabel) (?service_entry) (?service_retirement)
 ```
-[Try it on Wikidata Query Service](https://w.wiki/5wPC)
+
+### levee (Q105190) / flood defense
+Note: _installations containing dangerous forces_
+
+```sparql
+# levee (Q105190) / flood defense
+SELECT DISTINCT ?item ?itemLabel ?countryLabel ?located_in_admLabel ?coordinate_location WHERE {
+  VALUES ?instances_of {
+    wd:Q105190
+  }
+  ?item (p:P31/ps:P31) ?instances_of.
+  OPTIONAL { ?item wdt:P17 ?country. }
+  OPTIONAL { ?item wdt:P131 ?located_in_adm. }
+  OPTIONAL { ?item wdt:P625 ?coordinate_location. }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en,de,fr,ru,es,ja,zh,ar". }
+}
+ORDER BY (?countryLabel) (?located_in_adm) (?coordinate_location)
+```
+[Try it on Wikidata Query Service](https://w.wiki/5wPK)
 
 
 ## Tips
@@ -166,3 +184,7 @@ ORDER BY (?countryLabel) (?service_entry) (?operating_areaLabel)
 ```
 FILTER NOT EXISTS { ?item wdt:P17 ?val }
 ```
+
+## Organize WikiProjects
+- https://www.mediawiki.org/wiki/Help:Subpages
+  - `{{Special:PrefixIndex/Wikidata:WikiProject_Civil_Defense/}}`
