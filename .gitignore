@@ -13,3 +13,4 @@ Gemfile.lock
 .bundle
 vendor
 etc/_geo/pygeoapi
+ref/2023_defensa-civil-latam/test.rq

@@ -3,6 +3,21 @@
 ## Wikidata:WikiProject Civil Defense
 * https://www.wikidata.org/wiki/Wikidata:WikiProject_Civil_Defense
 
+## LATAM
+- Latin America (Q12585) https://www.wikidata.org/wiki/Q12585
+
+```sparql
+SELECT ?country_in_latam ?country_in_latamLabel WHERE {
+  wd:Q12585 wdt:P527 ?country_in_latam.
+  
+  # FIXME: this is returning South America and other regions
+  # wd:Q12585 wdt:P527 ?country_in_latam ;
+  #           wdt:P31 wd:Q6256 .
+  
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+```
+
 ## wikipedia en español
 - https://es.wikipedia.org/wiki/Protecci%C3%B3n_civil
 
@@ -45,3 +60,54 @@ ORDER BY ?operating_areaLabel
     - https://www.wikidata.org/wiki/Q5917500
 - Venezuela
   - https://www.pcivil.gob.ve/
+
+## TODO / REMOVE
+
+### Wikidata Continents, countries, regions and capitals
+
+```sparql
+# @see https://linkedwiki.com/query/wikidata_Continents,_countries,_regions_and_capitals?lang=EN
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+
+#defaultView:Tree
+SELECT ?continent ?continentFlag ?continentLabel ?country ?countryLabel ?countryFlag ?region ?regionLabel ?regionFlag ?city ?cityLabel ?cityImage ?property ?propertyLabel ?value ?valueLabel WHERE {
+  {
+    SELECT * WHERE {
+      ?continent wdt:P31 wd:Q5107.
+      ?country wdt:P30 ?continent.
+      ?country wdt:P31 wd:Q6256.
+      ?country wdt:P150 ?region.
+      OPTIONAL {
+        ?continent wdt:P242 ?continentFlag.
+        ?country wdt:P41 ?countryFlag.
+        ?region wdt:P41 ?regionFlag.
+      }
+      OPTIONAL {
+        ?region wdt:P36 ?city.
+        ?city wdt:P31 wd:Q515.
+        ?city wdt:P18 ?cityImage.
+        OPTIONAL {
+          VALUES (?prop) {
+            (wdt:P1082)
+            (wdt:P6)
+            (wdt:P190)
+            (wdt:P31)
+            (wdt:P571)
+            (wdt:P150)
+            (wdt:P206)
+            (wdt:P527)
+          }
+          ?city ?prop ?value.
+          ?property ?ref ?prop.
+          ?property rdf:type wikibase:Property.
+        }
+      }
+    }
+  }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+}
+```
