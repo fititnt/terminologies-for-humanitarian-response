@@ -1,10 +1,14 @@
 # Defensa civil en LATAM
 
+> See <https://www.wikidata.org/wiki/Wikidata:WikiProject_Civil_Defense/List_of_emergency_management_governmental_agencies/LATAM>
+
 ## Wikidata:WikiProject Civil Defense
 * https://www.wikidata.org/wiki/Wikidata:WikiProject_Civil_Defense
 
 ## LATAM
 - Latin America (Q12585) https://www.wikidata.org/wiki/Q12585
+  - https://www.worldometers.info/geography/how-many-countries-in-latin-america/
+  - https://www.britannica.com/topic/list-of-countries-in-Latin-America-2061416
 
 ```sparql
 SELECT ?country_in_latam ?country_in_latamLabel WHERE {
@@ -31,6 +35,32 @@ SELECT ?country_in_latam ?country_in_latamLabel WHERE {
 
 ## Wikidata
 
+### Defensa civil en LATAM
+
+```sparql
+# Defensa civil en LATAM
+# https://w.wiki/6Lka
+SELECT DISTINCT ?item ?itemLabel ?country ?countryLabel ?operating_areaLabel ?official_website
+
+WITH {
+  SELECT ?in_latam WHERE {
+    wd:Q12585 wdt:P527 ?in_latam .
+  }
+} AS %results 
+
+WHERE {
+  INCLUDE %results.
+  
+  ?item wdt:P101 wd:Q1460420 ;
+    (p:P31/ps:P31/(wdt:P279*)) wd:Q327333 ;
+    wdt:P17 ?in_latam .
+  OPTIONAL { ?item wdt:P17 ?country. }
+  OPTIONAL { ?item wdt:P2541 ?operating_area. }
+  OPTIONAL { ?item wdt:P856 ?official_website. }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en,de,fr,ru,es,ja,zh,ar". }
+}
+ORDER BY ?countryLabel ?operating_areaLabel
+```
 ### Defesa civil no Brasil
 ```sparql
 # https://w.wiki/5v2d
