@@ -5,42 +5,66 @@
 
 ## Wikidata SPARQL
 
-### Defensa civil en LATAM
+### Defensa civil en LATAM + Caribe
 
 ```sparql
-# Defensa civil en LATAM
-# https://w.wiki/6Lka
-SELECT DISTINCT ?item ?itemLabel ?country ?countryLabel ?operating_areaLabel ?official_website
-
-WITH {
-  SELECT ?in_latam WHERE {
-    wd:Q12585 wdt:P527 ?in_latam .
+# Defensa civil en LATAM + Caribe
+# https://w.wiki/6LmU
+SELECT DISTINCT ?item ?itemLabel ?country ?countryLabel ?operating_areaLabel ?official_website WHERE {
+  VALUES ?in_latam {
+    wd:Q77
+    wd:Q96
+    wd:Q155
+    wd:Q241
+    wd:Q298
+    wd:Q414
+    wd:Q419
+    wd:Q717
+    wd:Q733
+    wd:Q736
+    wd:Q739
+    wd:Q750
+    wd:Q774
+    wd:Q783
+    wd:Q786
+    wd:Q790
+    wd:Q792
+    wd:Q800
+    wd:Q804
+    wd:Q811
+    wd:Q1183
+    wd:Q25228
+    wd:Q781
+    wd:Q244
+    wd:Q242
+    wd:Q25305
+    wd:Q784
+    wd:Q769
+    wd:Q766
+    wd:Q13353
+    wd:Q13353
+    wd:Q763
+    wd:Q760
+    wd:Q757
+    wd:Q730
+    wd:Q778
+    wd:Q754
+    wd:Q18221
   }
-} AS %results 
-
-WHERE {
-  INCLUDE %results.
-  
-  ?item wdt:P101 wd:Q1460420 ;
-    (p:P31/ps:P31/(wdt:P279*)) wd:Q327333 ;
-    wdt:P17 ?in_latam .
+  ?item wdt:P101 wd:Q1460420;
+    (p:P31/ps:P31/(wdt:P279*)) wd:Q327333;
+    wdt:P17 ?in_latam.
   OPTIONAL { ?item wdt:P17 ?country. }
   OPTIONAL { ?item wdt:P2541 ?operating_area. }
   OPTIONAL { ?item wdt:P856 ?official_website. }
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en,de,fr,ru,es,ja,zh,ar". }
 }
-ORDER BY ?countryLabel ?operating_areaLabel
+ORDER BY (?countryLabel) (?operating_areaLabel)
 ```
 
+<!--
 ## Notas temporárias
 
-<!--
-### LATAM
-- Latin America (Q12585) https://www.wikidata.org/wiki/Q12585
-  - https://www.worldometers.info/geography/how-many-countries-in-latin-america/
-  - https://www.britannica.com/topic/list-of-countries-in-Latin-America-2061416
-- Latin America and the Caribbean (Q72829598) https://www.wikidata.org/wiki/Q72829598
--->
 
 ### Wikidata SPARQL (TODO remove)
 
@@ -122,3 +146,5 @@ ORDER BY ?country_in_latamLabel
 - Uruguay
 - Venezuela
   - https://www.pcivil.gob.ve/
+
+-->
