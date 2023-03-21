@@ -1,0 +1,11 @@
+= OpenStreetMap data for civil defense use =
+
+== Know to be used ==
+
+== Administrative Divisions ==
+
+== Not usable ==
+
+== See also ==
+* https://wiki.openstreetmap.org/wiki/User:EmericusPetro/sandbox/Data_layers_for_civil_defense_use
+* https://www.wikidata.org/wiki/Wikidata:WikiProject_Civil_Defense
