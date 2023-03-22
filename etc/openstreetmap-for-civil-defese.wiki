@@ -1,11 +1,40 @@
 = OpenStreetMap data for civil defense use =
 
-== Know to be used ==
+{{Note|Do not remove this section, its used for references and notes}}
 
-== Administrative Divisions ==
+* References
+** Article 61, Protocol Additional to the Geneva Conventions of 12 August 1949, and relating to the Protection of Victims of International Armed Conflicts (Protocol I) <ref name="protocol-i-61"  group="ref>Article 61, Protocol Additional to the Geneva Conventions of 12 August 1949, and relating to the Protection of Victims of International Armed Conflicts (Protocol I), 8 June 1977. Online: https://ihl-databases.icrc.org/en/ihl-treaties/api-1977/article-61</ref>
+** UN OCHA Toolbox: Natural Disaster CODs<ref name="un-ocha-toolbox-natural-disaster-cods-2023" group="ref">OCHA Information Management Toolbox, Natural Disaster CODs, https://humanitarian.atlassian.net/wiki/spaces/imtoolbox/pages/242090029/Natural+Disaster+CODs, archive page https://web.archive.org/fix-me</ref>
+
+* Notes:
+** ''Protocol I, Article 61, item xv, "planning and organization", requires real word proofs that is used''<ref name="protocol-i-xv" group="note">Protocol I, Article 61, item xv, "planning and organization", requires real word proofs that is used</ref>
+** ''It's strongly advisable to have at least one external identifier (see [[w:Authority control]]) for each of this feature, with well documented tagging conventions. Without this, reuse and consistency check is strongly limited''<ref name="feature-require-external-id" group="note">It's strongly advisable to have at least one external identifier (see [[w:Authority control]]) for each of this feature, with well documented tagging conventions. Without this, reuse and consistency check is strongly limited</ref>
+
+== General purpose data ==
+
+=== Administrative Divisions<ref name="protocol-i-xv" group="note" /> <ref name="un-ocha-toolbox-natural-disaster-cods-2023" group="ref" /> ===
+
+* [[Boundaries]]
+
+Limitations:
+* External identifier <ref name="feature-require-external-id" group="note" />
+
+=== Populated settlements<ref name="protocol-i-xv" group="note" /> <ref name="un-ocha-toolbox-natural-disaster-cods-2023" group="ref" /> ===
+
+* [[Key:place]]
+
+Limitations:
+* External identifier <ref name="feature-require-external-id" group="note" />
 
 == Not usable ==
+
 
 == See also ==
 * https://wiki.openstreetmap.org/wiki/User:EmericusPetro/sandbox/Data_layers_for_civil_defense_use
 * https://www.wikidata.org/wiki/Wikidata:WikiProject_Civil_Defense
+
+== Notes ==
+{{reflist|group=note}}
+
+==References==
+{{reflist|group=ref}}
