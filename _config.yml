@@ -41,6 +41,7 @@ exclude:
   - ref/emergency-management.md
   - ref/openstreetmap.md
   - etc/openstreetmap-for-civil-defese.md
+  - ref/2023_defensa-civil-cplp/README.md
 #   - CNAME
 #   # - Gemfile
 #   # - Gemfile.lock
