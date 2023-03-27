@@ -1,15 +1,44 @@
+## Brasil
+
+
+```overpassql
+// Limites administrativos sem IBGE:GEOCODIGO
+
+[out:json][timeout:240];
+
+area [name = "Santa Catarina"] [boundary=administrative][admin_level=4]-> .uf;
+
+rel [type=boundary][boundary=administrative][admin_level]
+  // Limite pelo máximo admin_level desejado dentro
+  // da Unidade da Federação (10, 9, 8, 7, 6, 5, 4):
+  (if: t["admin_level"] <= 10 )
+  [!"IBGE:GEOCODIGO"]  (area.uf);
+
+out center;
+
+{{style:
+  relation {text: eval('tag("name") . " (" . tag("admin_level") . ")"')}
+}}
+
+```
+
+
 ## Timor-Leste
 
 ```overpassql
 // OverpassQL para Timor-Leste.
 // Fonte oficial: http://timor-leste.gov.tl/?p=91&lang=pt
 // Geopackage: https://data.humdata.org/dataset/cod-ab-tls
+// Link: https://overpass-turbo.eu/s/1sUL
+
+/*  NOTA: Apenas Sucos em Tutuala foram cadastrados, tem o resto do país. */
+
 
 [out:json][timeout:240];
 area ["name:pt" = "Timor-Leste"] [boundary=administrative][admin_level=2]-> .pais;
 (
   // Pais | UNOCHA admin-0 | admin_level=2
-  rel [type=boundary][boundary=administrative][admin_level=2] (area.pais);
+  //rel [type=boundary][boundary=administrative][admin_level=2] (area.pais);
 
   // OSM admin_level=3 não usado
 
@@ -32,7 +61,27 @@ out body center;
 (._;>;);
 out;
 
-/* 
-NOTA: Apenas Sucos em Tutuala foram cadastrados, tem o resto do país. 
-*/
 ```
+
+### Nnós representativos que não são place
+
+```overpassql
+// OverpassQL para Timor-Leste.
+// Fonte oficial: http://timor-leste.gov.tl/?p=91&lang=pt
+// Geopackage: https://data.humdata.org/dataset/cod-ab-tls
+// URL: https://overpass-turbo.eu/s/1sVH
+/*  NOTA: Apenas Sucos em Tutuala foram cadastrados, tem o resto do país. */
+
+
+[out:json][timeout:240];
+area ["name:pt" = "Timor-Leste"] [boundary=administrative][admin_level=2]-> .pais;
+(
+  // Pais | UNOCHA admin-0 | admin_level=2
+  //rel [type=boundary][boundary=administrative][admin_level=2] (area.pais);
+
+  // O
+
+```
+
+- https://www.openstreetmap.org/changeset/99979596
+  - https://estatal.gov.tl/wp-content/uploads/2020/08/Diploma-Ministerial-n.%C2%BA-199GMMAEOTIX09-de-16-de-Setembro-Fixa-o-nu%CC%81mero-de-Sucos-e-Aldeias-em-Territo%CC%81rio-Nacional.pdf
