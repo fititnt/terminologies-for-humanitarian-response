@@ -1,3 +1,6 @@
+
+
+
 ## Brasil
 
 
@@ -20,6 +23,61 @@ out center;
   relation {text: eval('tag("name") . " (" . tag("admin_level") . ")"')}
 }}
 
+```
+
+```overpassql
+// Limites administrativos sem IBGE:GEOCODIGO
+
+[out:json][timeout:240];
+
+area [name = "Brasil"] [boundary=administrative][admin_level=2]-> .pais;
+
+rel [type=boundary][boundary=administrative][admin_level]
+  // Limite pelo máximo admin_level desejado dentro
+  // da Unidade da Federação (10, 9, 8, 7, 6, 5, 4):
+  (if: t["admin_level"] <= 6 )
+  [!"IBGE:GEOCODIGO"]  (area.pais);
+
+out center;
+
+{{style:
+  relation {text: eval('tag("name") . " (" . tag("admin_level") . ")"')}
+}}
+
+```
+
+```
+// Hospitais
+
+[out:json][timeout:25];
+{{geocodeArea:Santa Catarina}}->.searchArea;
+(
+  node["healthcare"="hospital"](area.searchArea);
+  way["healthcare"="hospital"](area.searchArea);
+  relation["healthcare"="hospital"](area.searchArea);
+);
+// print results
+out body;
+>;
+out skel qt;
+```
+
+// Vide https://www.openstreetmap.org/way/939407207 (precisaria mais de um ref)
+
+```
+// Base de ambulâncias
+
+[out:json][timeout:25];
+{{geocodeArea:Santa Catarina}}->.searchArea;
+(
+  node["emergency"="ambulance_station"](area.searchArea);
+  way["emergency"="ambulance_station"](area.searchArea);
+  relation["emergency"="ambulance_station"](area.searchArea);
+);
+// print results
+out body;
+>;
+out skel qt;
 ```
 
 
